@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventDetailsActivity"
+    android:background="@color/colorCardViewBackground">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="80dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+
+            android:paddingBottom="20dp"
+            >
+            <ImageView
+                android:id="@+id/icon1"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/icon"
+                android:layout_marginLeft="50dp"
+
+                ></ImageView>
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/colorDarkPurple"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="10dp"
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/event_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Hackathon"
+                        android:textColor = "#ffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                >
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/colorAccent"
+                    android:text="Event Code"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    ></TextView>
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/colorCardViewBackground"
+                    app:cardCornerRadius="25dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/event_code1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+
+                            android:hint="TC-01"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="20dp"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                >
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:text="Date"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    ></TextView>
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/colorCardViewBackground"
+                    app:cardCornerRadius="25dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/event_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+
+                            android:hint="12/09/2020"
+                            android:inputType="date"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="20dp"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                >
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#6748A3"
+                    android:text="Winner Prize"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    ></TextView>
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/colorCardViewBackground"
+                    app:cardCornerRadius="25dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/winner_prize"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+
+                            android:hint="50,000 Rs"
+                            android:inputType="number"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="20dp"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                >
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#6748A3"
+                    android:text="Runner up Prize"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    ></TextView>
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/colorCardViewBackground"
+                    app:cardCornerRadius="25dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/runner_up_prize"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+
+                            android:hint="7,000 Rs"
+                            android:inputType="number"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="20dp"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                >
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorLightPurple"
+                    android:text="Venue"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    ></TextView>
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/colorCardViewBackground"
+                    app:cardCornerRadius="25dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/venue"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+
+                            android:hint="Room : 1323A"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="20dp"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                >
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorLightPurple"
+                    android:text="Contact"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    ></TextView>
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/colorCardViewBackground"
+                    app:cardCornerRadius="25dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/contact_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:inputType="number"
+                            android:hint="0`x123456789"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="20dp"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

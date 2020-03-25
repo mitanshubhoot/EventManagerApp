@@ -1,0 +1,81 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "9c6ebc6105ac7e69c67375032b9e3c0e",
+    "entities": [
+      {
+        "tableName": "events_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`event_code` TEXT NOT NULL, `event_name` TEXT, `email_coord` TEXT, `Winner_prize` INTEGER NOT NULL, `Runner_prize` INTEGER NOT NULL, `entry_fee` INTEGER NOT NULL, `date` TEXT, `venue` TEXT, `domain` TEXT, PRIMARY KEY(`event_code`))",
+        "fields": [
+          {
+            "fieldPath": "event_code",
+            "columnName": "event_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "event_name",
+            "columnName": "event_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email_coord",
+            "columnName": "email_coord",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Winner_prize",
+            "columnName": "Winner_prize",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Runner_prize",
+            "columnName": "Runner_prize",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "entry_fee",
+            "columnName": "entry_fee",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "venue",
+            "columnName": "venue",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "domain",
+            "columnName": "domain",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "event_code"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"9c6ebc6105ac7e69c67375032b9e3c0e\")"
+    ]
+  }
+}
