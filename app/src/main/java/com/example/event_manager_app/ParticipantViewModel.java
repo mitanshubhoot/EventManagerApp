@@ -3,7 +3,6 @@ package com.example.event_manager_app;
 import android.content.Context;
 
 import androidx.annotation.NonNull;
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -28,6 +27,10 @@ public class ParticipantViewModel extends ViewModel {
     public List<String> getEventCodes(String email)
     {
         return participantRepository.getEventCodes(email);
+    }
+    public List<Participant> getParticipants()
+    {
+        return participantRepository.getParticipants();
     }
 
     public static class Factory implements ViewModelProvider.Factory {

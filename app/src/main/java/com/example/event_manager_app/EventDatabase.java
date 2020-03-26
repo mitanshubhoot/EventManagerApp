@@ -1,6 +1,6 @@
 package com.example.event_manager_app;
 
-import android.content.Context;
+import android.app.Application;
 import android.os.AsyncTask;
 
 import androidx.annotation.NonNull;
@@ -14,11 +14,11 @@ public abstract class EventDatabase extends RoomDatabase {
     public abstract EventDao EventDao();
     public static EventDatabase INSTANCE;
 
-    public static synchronized EventDatabase getEventDatabase(Context context)
+    public static synchronized EventDatabase getEventDatabase(Application context)
     {
         if(INSTANCE == null)
         {
-            INSTANCE = Room.databaseBuilder(context.getApplicationContext(), EventDatabase.class, "Event-database").fallbackToDestructiveMigration().addCallback(roomcallback).build();
+            INSTANCE = Room.inMemoryDatabaseBuilder(context.getApplicationContext(), EventDatabase.class).allowMainThreadQueries().fallbackToDestructiveMigration().addCallback(roomcallback).build();
         }
 
         return INSTANCE;

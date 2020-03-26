@@ -3,6 +3,7 @@ package com.example.event_manager_app;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -35,6 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         userViewModel = ViewModelProviders.of(this, new LoginViewModel.Factory(getApplicationContext())).get(LoginViewModel.class);
         final String email = mEmail.getText().toString();
+        Log.i("email : " ,"s"+email);
         if(sp.getBoolean("logged",false)){
             goToMainActivity(email);
             finish();
@@ -65,6 +67,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
+
 
     public void goToLoginActivity(){
         Intent i = new Intent(this,LoginActivity.class );

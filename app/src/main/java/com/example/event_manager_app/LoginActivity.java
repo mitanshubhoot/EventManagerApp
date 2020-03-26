@@ -41,16 +41,20 @@ public class LoginActivity extends AppCompatActivity {
             goToMainActivity(email);
             finish();
         }
+        Log.i("login activity ", "Login "+email+"my email");
+
 
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 boolean isValid = userViewModel.checkValidLogin(email, mPassword.getText().toString());
+                Log.i("Successful_Login", "Login was successful"+email+"my email");
+
                 if(isValid)
                 {
                     mProgressBar.setVisibility(View.VISIBLE);
                     Toast.makeText(getBaseContext(), "Successfully Logged In!", Toast.LENGTH_LONG).show();
-                    Log.i("Successful_Login", "Login was successful");
+                    Log.i("Successful_Login", "Login was successful"+email+"my email");
                     goToMainActivity(email);
                     sp.edit().putBoolean("logged",true).apply();
                     finish();

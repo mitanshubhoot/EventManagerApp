@@ -2,23 +2,23 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "123b00ca801325c0c830942692902496",
+    "identityHash": "903874a0765ff0f4ff2ac5cc7174548f",
     "entities": [
       {
         "tableName": "participants_table",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT, `event_code` TEXT, `college` TEXT, `year` TEXT, `email` TEXT NOT NULL, `contact` INTEGER NOT NULL, PRIMARY KEY(`email`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT NOT NULL, `event_code` TEXT NOT NULL, `college` TEXT, `year` TEXT NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `email` TEXT NOT NULL, `contact` INTEGER NOT NULL)",
         "fields": [
           {
             "fieldPath": "name",
             "columnName": "name",
             "affinity": "TEXT",
-            "notNull": false
+            "notNull": true
           },
           {
             "fieldPath": "event_code",
             "columnName": "event_code",
             "affinity": "TEXT",
-            "notNull": false
+            "notNull": true
           },
           {
             "fieldPath": "college",
@@ -30,7 +30,13 @@
             "fieldPath": "year",
             "columnName": "year",
             "affinity": "TEXT",
-            "notNull": false
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
           },
           {
             "fieldPath": "email",
@@ -47,17 +53,18 @@
         ],
         "primaryKey": {
           "columnNames": [
-            "email"
+            "id"
           ],
-          "autoGenerate": false
+          "autoGenerate": true
         },
         "indices": [],
         "foreignKeys": []
       }
     ],
+    "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"123b00ca801325c0c830942692902496\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '903874a0765ff0f4ff2ac5cc7174548f')"
     ]
   }
 }

@@ -19,6 +19,7 @@
         android:layout_marginBottom="70dp"
         >
 
+
         <ImageView
             android:id="@+id/coord"
             android:layout_width="match_parent"
@@ -99,6 +100,13 @@
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/timepass"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:background="@color/colorWhite"
+        android:textColor="@color/colorGrey"
+        ></TextView>
 
 
 </RelativeLayout>

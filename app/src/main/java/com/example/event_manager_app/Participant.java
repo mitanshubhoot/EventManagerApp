@@ -3,32 +3,43 @@ package com.example.event_manager_app;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import static com.example.event_manager_app.Participant.participants;
 
 @Entity(tableName = participants)
 public class Participant {
-
+    @NonNull
     @ColumnInfo
     String name;
+
+    @NonNull
     @ColumnInfo
     String event_code;
     @ColumnInfo
     String college;
+
+    public int getId() {
+        return id;
+    }
+    @NonNull
     @ColumnInfo
     String year;
     @NonNull
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
+    int id ;
+    @NonNull
+    @ColumnInfo
     String email;
+
+    @NonNull
     @ColumnInfo
     long contact;
 
 
     public static final  String participants = "participants_table";
 
-    @Ignore
+
     public Participant() {
 
     }
@@ -92,7 +103,5 @@ public class Participant {
     public void setYear(String year) {
         this.year = year;
     }
-
-
 
 }

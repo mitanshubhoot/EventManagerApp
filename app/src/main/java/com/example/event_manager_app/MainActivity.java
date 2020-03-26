@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Button volunteer;
     private Button participant;
     private RelativeLayout logout ;
+    private TextView tp;
     private static final String TAG = "MainActivity";
 
 
@@ -32,8 +34,14 @@ public class MainActivity extends AppCompatActivity {
         volunteer = (Button) findViewById(R.id.volu1);
         participant = (Button) findViewById(R.id.parti1);
         logout = (RelativeLayout) findViewById(R.id.logout) ;
+        tp = findViewById(R.id.timepass);
         sp = getSharedPreferences("login",MODE_PRIVATE);
         final String currentUserEmail = getIntent().getStringExtra("email");
+        tp.setText("hii");
+
+        Log.i("email" , "my email = " + currentUserEmail );
+
+
 
         coordinator.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +74,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    public void onStart() {
+
+        super.onStart();
+        Log.i("main Activity " , "HII" );
+        final String currentUserEmail = getIntent().getStringExtra("email");
+        Log.i("email" , currentUserEmail + "em");
+        Log.i("main Activity " , "byee" );
+
+
+    }
+
     public void goToCoordinatorActivity( String currentUserEmail){
         Intent i = new Intent(this,CoordinatorActivity.class);
         i.putExtra("cemail",currentUserEmail);
@@ -83,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void goToParticipantActivity(String currentUserEmail){
         Intent i = new Intent(this,ParticipantActivity.class);
-        i.putExtra("cemail",currentUserEmail);
+        i.putExtra("pemail",currentUserEmail);
         startActivity(i);
     }
     @Override

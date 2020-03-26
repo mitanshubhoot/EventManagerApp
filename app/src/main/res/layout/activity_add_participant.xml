@@ -60,7 +60,7 @@
                         android:layout_height="match_parent">
 
                         <EditText
-                            android:id="@+id/parti_name"
+                            android:id="@+id/parti_name_ap"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="16dp"
@@ -121,7 +121,7 @@
                         android:layout_height="match_parent">
 
                         <EditText
-                            android:id="@+id/event_code_p"
+                            android:id="@+id/event_code_ap"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="16dp"
@@ -181,7 +181,7 @@
                         android:layout_height="match_parent">
 
                         <EditText
-                            android:id="@+id/college"
+                            android:id="@+id/college_ap"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="16dp"
@@ -239,7 +239,7 @@
                         android:layout_height="match_parent">
 
                         <EditText
-                            android:id="@+id/year"
+                            android:id="@+id/year_ap"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="16dp"
@@ -298,7 +298,7 @@
                         android:layout_height="match_parent">
 
                         <EditText
-                            android:id="@+id/email_p"
+                            android:id="@+id/email_ap"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="16dp"
@@ -357,7 +357,7 @@
                         android:layout_height="match_parent">
 
                         <EditText
-                            android:id="@+id/contact_p"
+                            android:id="@+id/contact_ap"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="16dp"

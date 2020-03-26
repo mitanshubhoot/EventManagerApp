@@ -8,28 +8,35 @@ import java.util.List;
 
 public class EventRepository {
     private final EventDao eventDao;
-    private static EventRepository instance;
-    private LiveData<Event> participantEventData;
+    private LiveData<List<Event>> participantEventData;
 
-    public EventRepository(Application context)
+    public EventRepository(Application context )
     {
         EventDatabase database = EventDatabase.getEventDatabase(context);
+        eventDao = database.EventDao();
+
     }
 
-    public static EventRepository getInstance(EventDao eventDao)
+    /*public static EventRepository getInstance(EventDao eventDao)
     {
         if(instance == null)
         {
             instance = new EventRepository(eventDao);
         }
         return instance;
-    }
+    }*/
     public LiveData<List<Event>> getAllEvents(List<String> codes)
     {
-        return eventDao.getAllEvents(codes);
+        participantEventData = eventDao.getAllEvents(codes);
+        return participantEventData;
     }
     public void insert(Event e)
     {
         eventDao.insert(e);
+    }
+
+    public List<Event> getInitialStatus()
+    {
+        return eventDao.getInitialStaus();
     }
 }

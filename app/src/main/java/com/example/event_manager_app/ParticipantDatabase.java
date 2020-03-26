@@ -14,7 +14,7 @@ public abstract  class ParticipantDatabase extends RoomDatabase {
     {
         if(INSTANCE == null)
         {
-            INSTANCE = Room.databaseBuilder(context.getApplicationContext(), ParticipantDatabase.class, "participant-database").allowMainThreadQueries().build();
+            INSTANCE = Room.inMemoryDatabaseBuilder(context.getApplicationContext(), ParticipantDatabase.class).allowMainThreadQueries().allowMainThreadQueries().build();
 
         }
 

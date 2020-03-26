@@ -22,12 +22,12 @@ public class AddParticipantActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_participant);
-        name = (EditText)findViewById(R.id.parti_name);
-        event_code = (EditText)findViewById(R.id.event_code_p);
-        college = (EditText)findViewById(R.id.college);
-        year = (EditText)findViewById(R.id.year);
-        email = (EditText)findViewById(R.id.email_p);
-        contact = (EditText)findViewById(R.id.contact_p);
+        name = (EditText)findViewById(R.id.parti_name_ap);
+        event_code = (EditText)findViewById(R.id.event_code_ap);
+        college = (EditText)findViewById(R.id.college_ap);
+        year = (EditText)findViewById(R.id.year_ap);
+        email = (EditText)findViewById(R.id.email_ap);
+        contact = (EditText)findViewById(R.id.contact_ap);
         Add = (RelativeLayout) findViewById(R.id.add_p);
         pmodel = ViewModelProviders.of(this , new ParticipantViewModel.Factory(getApplicationContext())).get(ParticipantViewModel.class);
         final String mname  = name.getText().toString();

@@ -38,4 +38,9 @@ public class ParticipantRepository {
     {
         return participantDao.getEventCodes(email);
     }
+
+    public List<Participant> getParticipants()
+    {
+        return participantDao.getParticipants();
+    }
 }
