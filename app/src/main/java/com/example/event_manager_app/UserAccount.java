@@ -14,14 +14,19 @@ public class UserAccount {
 
     public static final String TABLE_NAME = "useraccounts";
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
+    int userid;
     @NonNull
     String email;
     int cid;
     int pid;
+
+    public int getUserid() {
+        return userid;
+    }
+
     int vid;
     String password;
-
     public void setCid(int cid) {
         this.cid = cid;
     }

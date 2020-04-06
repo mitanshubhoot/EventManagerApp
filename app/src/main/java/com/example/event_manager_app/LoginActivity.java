@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressBar mProgressBar;
     private RelativeLayout mLoginButton;
     private LoginViewModel userViewModel;
+    public static String  email ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,27 +36,31 @@ public class LoginActivity extends AppCompatActivity {
         mProgressBar = (ProgressBar) findViewById(R.id.loading) ;
 
         sp = getSharedPreferences("login",MODE_PRIVATE);
+
         userViewModel = ViewModelProviders.of(this, new LoginViewModel.Factory(getApplicationContext())).get(LoginViewModel.class);
-        final String email = mEmail.getText().toString();
+
         if(sp.getBoolean("logged",false)){
             goToMainActivity(email);
             finish();
         }
-        Log.i("login activity ", "Login "+email+"my email");
-
 
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean isValid = userViewModel.checkValidLogin(email, mPassword.getText().toString());
-                Log.i("Successful_Login", "Login was successful"+email+"my email");
+                email = mEmail.getText().toString();
+                boolean isValid = userViewModel.checkValidLogin(mEmail.getText().toString(), mPassword.getText().toString());
+                if(mEmail.getText().toString().equals(""))
+                {
+                    Toast.makeText(getBaseContext(), "please enter email", Toast.LENGTH_LONG).show();
+                    Log.i("email", "empty");
 
-                if(isValid)
+
+                }
+                if(isValid )
                 {
                     mProgressBar.setVisibility(View.VISIBLE);
                     Toast.makeText(getBaseContext(), "Successfully Logged In!", Toast.LENGTH_LONG).show();
-                    Log.i("Successful_Login", "Login was successful"+email+"my email");
-                    goToMainActivity(email);
+                    goToMainActivity(mEmail.getText().toString());
                     sp.edit().putBoolean("logged",true).apply();
                     finish();
                 }
@@ -74,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
                 goToRegisterActivity();
                 sp.edit().putBoolean("logged",true).apply();
             }
-        });        userViewModel = ViewModelProviders.of(this, new LoginViewModel.Factory(getApplicationContext())).get(LoginViewModel.class);
+        });
 
     }
 

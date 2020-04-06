@@ -30,17 +30,14 @@ public class AddParticipantActivity extends AppCompatActivity {
         contact = (EditText)findViewById(R.id.contact_ap);
         Add = (RelativeLayout) findViewById(R.id.add_p);
         pmodel = ViewModelProviders.of(this , new ParticipantViewModel.Factory(getApplicationContext())).get(ParticipantViewModel.class);
-        final String mname  = name.getText().toString();
-        final String mevent_code = event_code.getText().toString();
-        final String mcollege = college.getText().toString();
-        final String myear = year.getText().toString() ;
-        final String memail= email.getText().toString();
 
         Add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pmodel.addParticipant(mname , mevent_code , mcollege , myear , memail , Long.parseLong(contact.getText().toString()));
-                Toast.makeText(getBaseContext(), "participant added ", Toast.LENGTH_LONG).show();
+                if(!email.getText().toString().equals("") && !event_code.getText().toString().equals("")) {
+                    pmodel.addParticipant(name.getText().toString(), event_code.getText().toString(),college.getText().toString(),year.getText().toString() , email.getText().toString(), Long.parseLong(contact.getText().toString()));
+                    Toast.makeText(getBaseContext(), "participant added ", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

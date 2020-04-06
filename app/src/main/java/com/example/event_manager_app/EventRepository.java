@@ -37,6 +37,6 @@ public class EventRepository {
 
     public List<Event> getInitialStatus()
     {
-        return eventDao.getInitialStaus();
+        return eventDao.getInitialStatus();
     }
 }

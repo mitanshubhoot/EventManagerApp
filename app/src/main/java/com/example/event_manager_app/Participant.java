@@ -3,6 +3,7 @@ package com.example.event_manager_app;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import static com.example.event_manager_app.Participant.participants;
@@ -39,7 +40,7 @@ public class Participant {
 
     public static final  String participants = "participants_table";
 
-
+    @Ignore
     public Participant() {
 
     }

@@ -5,7 +5,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,15 +17,15 @@ public class ParticipantActivity extends AppCompatActivity {
     private ParticipantViewModel pmodel;
     private EventViewModel emodel ;
     private RecyclerView recyclerView;
-
+    private List<String> codes;
+    private MediatorLiveData<List<Event>> mediatorLiveData = new MediatorLiveData<>();
     private ParticipantActivity context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_participant);
-        //final String currentUserEmail = getIntent().getStringExtra("pemail");
-        final String currentUserEmail = "oswalsakshi17@gmail.com";
+        final String currentUserEmail = getIntent().getStringExtra("pemail");
         pmodel = ViewModelProviders.of(this, new ParticipantViewModel.Factory(getApplicationContext())).get(ParticipantViewModel.class);
         //emodel = ViewModelProviders.of(this, new EventViewModel.Factory(getApplicationContext())).get(EventViewModel.class);
         emodel = ViewModelProviders.of(this ).get( EventViewModel.class);
@@ -34,22 +34,21 @@ public class ParticipantActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         recyclerView.setHasFixedSize(true);
-        List<String> codes = pmodel.getEventCodes(currentUserEmail);
-        LiveData<List<Event>> events = emodel.getAllEvents(codes);
+         codes = pmodel.getEventCodes(currentUserEmail);
+
         final EventAdaptor adaptor = new EventAdaptor();
         recyclerView.setAdapter(adaptor);
+
         Log.d("partcipant activity", "hii"+ emodel.getAllEvents(codes).getValue());
         List<Event> initial = emodel.getInitialStatus();
-        Log.d("partcipant activity", "initial status "+initial.get(0).getEvent_code() );
+        Log.d("partcipant activity", "initial status "+(initial.size()));
+        Log.d("codes","codes are "+codes);
+        Log.d("partcipant email", " hh"+ (pmodel.getParticipants().get(0).getYear())
+                +"curent user " +currentUserEmail  + pmodel.getParticipants().get(0).getEvent_code().equals(initial.get(0).getEvent_code()));
 
 
 
-
-        Log.d("partcipant activity", "hii"+ codes );
-        Log.d("partcipant email", " hh"+ (pmodel.getParticipants().get(0).getYear()) +"curent user " +currentUserEmail  + pmodel.getParticipants().get(0).getEvent_code());
-
-
-        events.observe(this, new Observer<List<Event>>() {
+        emodel.getAllEvents(codes).observe(this, new Observer<List<Event>>() {
                     @Override
                     public void onChanged(List<Event> events) {
                         //update recycler view
@@ -72,6 +71,7 @@ public class ParticipantActivity extends AppCompatActivity {
     //.observe(context , userListUpdateObserver);
        */
     }
+
 
 
     /*

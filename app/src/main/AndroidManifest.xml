@@ -7,20 +7,20 @@
         android:icon="@mipmap/icon"
         android:label="Eventix"
         android:roundIcon="@mipmap/ic_launcher_round"
-
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddParticipantActivity"></activity>
+        <activity android:name=".AttendanceActivity"></activity>
+        <activity android:name=".AddParticipantActivity" />
         <activity android:name=".VolunteerDetailsActivity" />
         <activity android:name=".EventDetailsActivity" />
         <activity android:name=".ParticipantActivity" />
         <activity android:name=".VolunteerActivity" />
         <activity android:name=".CoordinatorActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

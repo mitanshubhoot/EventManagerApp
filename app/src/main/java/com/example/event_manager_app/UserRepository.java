@@ -1,13 +1,10 @@
 package com.example.event_manager_app;
 
-import androidx.lifecycle.LiveData;
-
-
 public class UserRepository {
 
     private final UserAccountDao userAccountDao;
     private static UserRepository instance;
-    private LiveData<UserAccount> userAccountLiveData;
+
 
     private UserRepository(UserAccountDao userAccountDao)
     {

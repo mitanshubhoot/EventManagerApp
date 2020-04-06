@@ -1,9 +1,330 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VolunteerDetailsActivity">
+    tools:context=".EventDetailsActivity"
+    android:background="@drawable/back"
+    android:padding="40dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+
+            android:paddingBottom="20dp"
+            >
+            <ImageView
+                android:id="@+id/icon1"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/icon"
+
+                ></ImageView>
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="230dp"
+                android:layout_height="50dp"
+
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/colorGrey"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="10dp"
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Volunteer_Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Sakshi Oswal"
+                        android:textColor = "#ffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            >
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                >
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="250dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/colorDarkPurple"
+                    app:cardCornerRadius="25dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:text="Email"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/colorCardViewBackground"
+                            android:textSize="20dp"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/colorCardViewBackground"
+                    app:cardCornerRadius="25dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/email_volunteer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+
+                            android:hint="eventix@gmail.com"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="20dp"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                >
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="250dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="25dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:text="Contact No."
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/colorCardViewBackground"
+                            android:textSize="20dp"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/colorCardViewBackground"
+                    app:cardCornerRadius="25dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/contact_volunteer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+
+                            android:hint="0123456789"
+                            android:inputType="number"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="20dp"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                >
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="250dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/colorDarkPurple"
+                    app:cardCornerRadius="25dp"
+                    android:layout_marginLeft="20dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:text="Publicity Hours"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/colorCardViewBackground"
+                            android:textSize="20dp"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/colorCardViewBackground"
+                    app:cardCornerRadius="25dp"
+                    android:layout_marginLeft="20dp"
+
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/publicity_hours_v"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+
+                            android:hint="2"
+                            android:inputType="number"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="20dp"
+                            android:gravity="center"/>
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/add_vol"
+                    android:layout_width="40dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/add"
+                    ></Button>
+                <Button
+                    android:id="@+id/sub_vol"
+                    android:layout_width="40dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/sub"
+                    ></Button>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -16,5 +16,5 @@ public interface EventDao {
     void insert(Event e);
 
     @Query("SELECT * FROM events_table")
-    List<Event> getInitialStaus();
+    List<Event> getInitialStatus();
 }

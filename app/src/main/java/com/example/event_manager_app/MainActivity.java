@@ -9,18 +9,17 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     SharedPreferences sp;
+    SharedPreferences sp1;
     private Button coordinator;
     private Button volunteer;
     private Button participant;
     private RelativeLayout logout ;
-    private TextView tp;
     private static final String TAG = "MainActivity";
 
 
@@ -34,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
         volunteer = (Button) findViewById(R.id.volu1);
         participant = (Button) findViewById(R.id.parti1);
         logout = (RelativeLayout) findViewById(R.id.logout) ;
-        tp = findViewById(R.id.timepass);
-        sp = getSharedPreferences("login",MODE_PRIVATE);
+        sp1 = getSharedPreferences("Main Activity",MODE_PRIVATE);
+        sp= getSharedPreferences("login",MODE_PRIVATE);
+
         final String currentUserEmail = getIntent().getStringExtra("email");
-        tp.setText("hii");
 
         Log.i("email" , "my email = " + currentUserEmail );
 
@@ -77,11 +76,8 @@ public class MainActivity extends AppCompatActivity {
     public void onStart() {
 
         super.onStart();
-        Log.i("main Activity " , "HII" );
         final String currentUserEmail = getIntent().getStringExtra("email");
         Log.i("email" , currentUserEmail + "em");
-        Log.i("main Activity " , "byee" );
-
 
     }
 
@@ -92,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void goToLoginActivity(){
         Intent i = new Intent(this,LoginActivity.class);
+        sp1.edit().putBoolean("logout",true).apply();
+        i.putExtra("login",true);
         startActivity(i);
     }
     public void goToVolunteerActivity(String currentUserEmail){
