@@ -1,2 +1,2 @@
-Event Manager App
-Project for DBMS Project
+Event Manager App \n
+repo for DBMS Project
