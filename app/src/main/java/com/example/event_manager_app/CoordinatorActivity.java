@@ -7,9 +7,12 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
 
 public class CoordinatorActivity extends AppCompatActivity {
     private VolunteerViewModel volunteerViewModel;
@@ -35,17 +38,11 @@ public class CoordinatorActivity extends AppCompatActivity {
         final VolunteerAdaptor adaptor = new VolunteerAdaptor();
         recyclerView.setAdapter(adaptor);
 
-
-
-
-
-
-
         adaptor.setOnItemClickListener(new VolunteerAdaptor.onItemClickListener() {
             @Override
             public void onItemClick(Volunteer volunteer) {
                 Intent i = new Intent(CoordinatorActivity.this , VolunteerDetailsActivity.class);
-                i.putExtra(VolunteerDetailsActivity.V_NAME , volunteer.getName());
+                i.putExtra("V_NAME", volunteer.getName());
                 i.putExtra(VolunteerDetailsActivity.V_EMAIL , volunteer.getEmail());
                 i.putExtra(VolunteerDetailsActivity.V_HOURS_PUBLICITY , volunteer.getNoOfHoursPublicity());
                 i.putExtra(VolunteerDetailsActivity.V_CONTACT , volunteer.getNumber());
@@ -57,14 +54,12 @@ public class CoordinatorActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
-
-
+        volunteerViewModel.getAllVolunteers(currentUserEmail).observe(this, new Observer<List<Volunteer>>() {
+            @Override
+            public void onChanged(List<Volunteer> volunteers) {
+                adaptor.setVolunteers(volunteers);
+  }
+        });
     }
 
 
@@ -75,25 +70,16 @@ public class CoordinatorActivity extends AppCompatActivity {
         {
             int publicity_hours = data.getIntExtra(VolunteerDetailsActivity.V_HOURS_PUBLICITY,0);
             int vid = data.getIntExtra(VolunteerDetailsActivity.V_ID,-1);
-            if(vid!=-1)
+            if(vid!= -1)
             {
                 volunteerViewModel.update_hours(vid , publicity_hours);
-                Toast.makeText(this, "update saved"+publicity_hours, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "update saved with id : "+ vid , Toast.LENGTH_SHORT).show();
             }
             else
                 Toast.makeText(this, "id not found", Toast.LENGTH_SHORT).show();
 
-
-
-
-
-
         }
         else
             Toast.makeText(this, "Nothing updated"+requestCode+" " + RESULT_OK+ "=" + resultCode, Toast.LENGTH_SHORT).show();
-
-
-
-
     }
 }

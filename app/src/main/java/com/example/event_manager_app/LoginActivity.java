@@ -67,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
                 else
                 {
                     Toast.makeText(getBaseContext(), "Invalid Login!", Toast.LENGTH_SHORT).show();
-                    Log.i("Unsuccessful_Login", "Login was not successful");
+                    Log.i("Unsuccessful_Login", "Login was not successful" );
                 }
 
 

@@ -4,7 +4,6 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -12,7 +11,7 @@ import java.util.List;
 
 public class VolunteerViewModel extends ViewModel {
     private VolunteerRepository volunteerRepository;
-    private MutableLiveData<List<Volunteer>> volunteersLiveData ;
+    private LiveData<List<Volunteer>> volunteersLiveData ;
 
     public VolunteerViewModel(Context context)
     {
@@ -21,10 +20,7 @@ public class VolunteerViewModel extends ViewModel {
     }
     public LiveData<List<Volunteer>> getAllVolunteers(String email)
     {
-        if(volunteersLiveData == null){
-            volunteersLiveData = new MutableLiveData<>() ;
-            volunteersLiveData = (MutableLiveData<List<Volunteer>>)volunteerRepository.getAllVolunteers(email);
-        }
+
         return volunteerRepository.getAllVolunteers(email);
 
     }
