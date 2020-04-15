@@ -42,7 +42,7 @@ public class CoordinatorActivity extends AppCompatActivity {
             @Override
             public void onItemClick(Volunteer volunteer) {
                 Intent i = new Intent(CoordinatorActivity.this , VolunteerDetailsActivity.class);
-                i.putExtra("V_NAME", volunteer.getName());
+                i.putExtra(VolunteerDetailsActivity.V_NAME, volunteer.getName());
                 i.putExtra(VolunteerDetailsActivity.V_EMAIL , volunteer.getEmail());
                 i.putExtra(VolunteerDetailsActivity.V_HOURS_PUBLICITY , volunteer.getNoOfHoursPublicity());
                 i.putExtra(VolunteerDetailsActivity.V_CONTACT , volunteer.getNumber());
@@ -70,10 +70,10 @@ public class CoordinatorActivity extends AppCompatActivity {
         {
             int publicity_hours = data.getIntExtra(VolunteerDetailsActivity.V_HOURS_PUBLICITY,0);
             int vid = data.getIntExtra(VolunteerDetailsActivity.V_ID,-1);
-            if(vid!= -1)
+            if(vid != -1)
             {
                 volunteerViewModel.update_hours(vid , publicity_hours);
-                Toast.makeText(this, "update saved with id : "+ vid , Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "update saved with id : " + vid , Toast.LENGTH_SHORT).show();
             }
             else
                 Toast.makeText(this, "id not found", Toast.LENGTH_SHORT).show();
