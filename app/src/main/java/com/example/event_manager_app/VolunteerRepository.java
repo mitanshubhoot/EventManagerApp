@@ -1,5 +1,7 @@
 package com.example.event_manager_app;
 
+import androidx.lifecycle.LiveData;
+
 import java.util.List;
 
 public class VolunteerRepository {
@@ -17,9 +19,16 @@ public class VolunteerRepository {
         }
         return instance;
     }
-    public List<Volunteer> getAllVolunteers(String email)
+    public LiveData<List<Volunteer>> getAllVolunteers(String email)
     {
         return  volunteerDao.getAllVolunteers(email);
+    }
+
+    public void update_hours(int id , int hours)
+    {
+        volunteerDao.update_hours(id ,  hours);
+        return;
+
     }
 
 

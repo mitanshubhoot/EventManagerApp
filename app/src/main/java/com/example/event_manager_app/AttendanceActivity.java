@@ -7,10 +7,12 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class AttendanceActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ParticipantViewModel participantViewModel;
-
+    private List<Participant> participantList ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +24,18 @@ public class AttendanceActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         recyclerView.setHasFixedSize(true);
-        volunteers = volunteerViewModel.getAllVolunteers(currentUserEmail);
+        participantList = participantViewModel.getParticipants();
 
         final AttendanceAdaptor adaptor = new AttendanceAdaptor();
         recyclerView.setAdapter(adaptor);
-       adaptor.setPartcipants(p);
+       adaptor.setPartcipants(participantList);
 
+
+    }
+    @Override
+    public void onStart() {
+
+        super.onStart();
 
     }
 }
