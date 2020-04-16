@@ -7,7 +7,7 @@
     tools:context=".CoordinatorActivity"
     android:background="@drawable/back"
 
-    android:padding="25dp">
+    android:padding="5dp">
 
     <ImageView
         android:id="@+id/logo"
@@ -36,6 +36,8 @@
             android:scrollbars="vertical"
             tools:listitem="@layout/layout_participant"
             android:layoutAnimation="@anim/layout_animation_slide_right"
+
+
 
 
             >

@@ -4,38 +4,68 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
     >
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="2dp"
+        app:cardCornerRadius="25dp"
+
         >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:background="@color/colorWhite">
-            <CheckBox
-                android:id="@+id/check_box"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                ></CheckBox>
+            android:orientation="vertical">
             <TextView
-                android:id="@+id/participant_email"
-                android:layout_width="250dp"
-                android:layout_height="60dp"
-                android:hint="oswalsakshi17@gmail.com"
-                android:layout_weight="1"
-                android:textSize="15dp"
-                android:gravity="center"
-                android:inputType="textEmailAddress"
+                android:id="@+id/event_code_participant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:hint="Event Code"
+                android:textSize="25dp"
+                android:gravity="center_horizontal"
+                android:textColor="#111010"
+                >
 
-                android:layout_alignLeft="@+id/date" ></TextView>
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/colorWhite">
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:button="@null"
+                android:background="?android:attr/listChoiceIndicatorMultiple"
+                    android:layout_marginLeft="20dp"
+                    ></CheckBox>
+                <TextView
+                    android:id="@+id/participant_email"
+                    android:layout_width="250dp"
+                    android:layout_height="60dp"
+                    android:hint="oswalsakshi17@gmail.com"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:gravity="center_horizontal"
+                    android:inputType="textEmailAddress"
+
+                    android:textColor="@color/colorDarkPurple"
+
+
+                    ></TextView>
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
+
+
     </androidx.cardview.widget.CardView>
 
 

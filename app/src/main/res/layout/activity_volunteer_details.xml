@@ -25,20 +25,15 @@
 
             android:paddingBottom="20dp"
             >
-            <ImageView
-                android:id="@+id/icon1"
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/icon"
 
-                ></ImageView>
 
             <androidx.cardview.widget.CardView
 
-                android:layout_width="230dp"
+                android:layout_width="250dp"
                 android:layout_height="50dp"
+                android:layout_marginLeft="40dp"
 
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 app:cardBackgroundColor="@color/colorGrey"
                 app:cardCornerRadius="25dp"
                 app:cardElevation="10dp"
@@ -136,7 +131,7 @@
                             android:hint="eventix@gmail.com"
                             android:inputType="textEmailAddress"
                             android:textColor="@color/colorTitle"
-                            android:textSize="20dp"
+                            android:textSize="17dp"
                             android:gravity="center"/>
                     </RelativeLayout>
 
@@ -241,7 +236,7 @@
                     android:layout_marginTop="12dp"
                     android:layout_weight="1"
                     android:layout_gravity="center_horizontal"
-                    app:cardBackgroundColor="@color/colorDarkPurple"
+                    app:cardBackgroundColor="@color/colorLightPurple"
                     app:cardCornerRadius="25dp"
                     android:layout_marginLeft="20dp"
 
@@ -303,14 +298,18 @@
                 <Button
                     android:id="@+id/add_vol"
                     android:layout_width="40dp"
-                    android:layout_height="55dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/add"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
                     ></Button>
                 <Button
                     android:id="@+id/sub_vol"
                     android:layout_width="40dp"
-                    android:layout_height="55dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/sub"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="5dp"
                     ></Button>
 
 

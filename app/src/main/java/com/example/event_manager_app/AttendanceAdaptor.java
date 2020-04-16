@@ -30,6 +30,7 @@ public class AttendanceAdaptor extends RecyclerView.Adapter<AttendanceAdaptor.My
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
         Participant participant = partcipants.get(position);
         holder.email.setText(participant.getEmail());
+        holder.event_code.setText(participant.getEvent_code());
        //in some cases, it will prevent unwanted situations
         holder.attendance.setOnCheckedChangeListener(null);
 
@@ -63,11 +64,13 @@ public class AttendanceAdaptor extends RecyclerView.Adapter<AttendanceAdaptor.My
     public class MyViewHolder extends RecyclerView.ViewHolder {
         private TextView email ;
         private CheckBox attendance;
+        private TextView event_code;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             email = itemView.findViewById(R.id.participant_email);
-            attendance = itemView.findViewById(R.id.check_box);
+            attendance = itemView.findViewById(R.id.checkbox);
+            event_code = itemView.findViewById(R.id.event_code_participant);
             attendance.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

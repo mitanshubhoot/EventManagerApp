@@ -28,9 +28,17 @@
             android:id="@+id/list_volunteers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fadingEdge="horizontal"
             android:orientation="vertical"
+            android:outlineSpotShadowColor="@color/colorGrey"
             android:scrollbars="vertical"
-            tools:listitem="@layout/layout_volunteer">
+            tools:listitem="@layout/layout_volunteer"
+            android:layoutAnimation="@anim/layout_animation_fall_down"
+
+
+
+
+            >
 
         </androidx.recyclerview.widget.RecyclerView>
     </RelativeLayout>
