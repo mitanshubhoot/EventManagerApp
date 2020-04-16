@@ -46,6 +46,8 @@ public class VolunteerActivity extends AppCompatActivity {
         attendance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(VolunteerActivity.this , AttendanceActivity.class);
+                startActivity(i);
 
             }
         });

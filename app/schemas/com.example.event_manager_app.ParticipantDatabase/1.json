@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "903874a0765ff0f4ff2ac5cc7174548f",
+    "identityHash": "bd1affa16d9f8a00ae30ee3d9b3f1a4a",
     "entities": [
       {
         "tableName": "participants_table",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT NOT NULL, `event_code` TEXT NOT NULL, `college` TEXT, `year` TEXT NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `email` TEXT NOT NULL, `contact` INTEGER NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT NOT NULL, `event_code` TEXT NOT NULL, `college` TEXT, `year` TEXT NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `email` TEXT NOT NULL, `contact` INTEGER NOT NULL, `attendance` INTEGER NOT NULL)",
         "fields": [
           {
             "fieldPath": "name",
@@ -49,6 +49,12 @@
             "columnName": "contact",
             "affinity": "INTEGER",
             "notNull": true
+          },
+          {
+            "fieldPath": "attendance",
+            "columnName": "attendance",
+            "affinity": "INTEGER",
+            "notNull": true
           }
         ],
         "primaryKey": {
@@ -64,7 +70,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '903874a0765ff0f4ff2ac5cc7174548f')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'bd1affa16d9f8a00ae30ee3d9b3f1a4a')"
     ]
   }
 }

@@ -19,10 +19,12 @@
         android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="100dp"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="100dp"
-        android:animateLayoutChanges="true">
+        android:animateLayoutChanges="true"
+
+        >
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list_volunteers_attendance"
@@ -31,11 +33,13 @@
             android:orientation="vertical"
             android:scrollbars="vertical"
             tools:listitem="@layout/layout_participant"
-            android:elevation="30dp"
+
             >
 
         </androidx.recyclerview.widget.RecyclerView>
+
     </RelativeLayout>
+
 
 
 

@@ -1,5 +1,6 @@
 package com.example.event_manager_app;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -10,8 +11,6 @@ import java.util.List;
 public interface ParticipantDao {
     @Insert
     void insert(Participant p);
-    @Insert
-    void insert(Participant... partcipants);
 
 
 
@@ -22,6 +21,9 @@ public interface ParticipantDao {
     List<String> getEventCodes(String email);
 
     @Query("SELECT * FROM participants_table")
-    List<Participant> getParticipants();
+    LiveData<List<Participant>> getParticipants();
+
+    @Query("UPDATE participants_table SET attendance= :attendance where id=:id")
+    void AttendanceUpdater(boolean attendance , int id);
 
 }

@@ -43,10 +43,6 @@ public class ParticipantActivity extends AppCompatActivity {
         List<Event> initial = emodel.getInitialStatus();
         Log.d("partcipant activity", "initial status "+(initial.size()));
         Log.d("codes","codes are "+codes);
-        Log.d("partcipant email", " hh"+ (pmodel.getParticipants().get(0).getYear())
-                +"curent user " +currentUserEmail  + pmodel.getParticipants().get(0).getEvent_code().equals(initial.get(0).getEvent_code()));
-
-
 
         emodel.getAllEvents(codes).observe(this, new Observer<List<Event>>() {
                     @Override
@@ -60,29 +56,7 @@ public class ParticipantActivity extends AppCompatActivity {
 
                     }
                 });
-
-
-                //adaptor = new EventAdaptor(events);
-
-        /*emodel.getAllEvents(codes);
-        adaptor = new MyAdaptor(context,(List<Event>) events);
-        recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        recyclerView.setAdapter(adaptor);
-    //.observe(context , userListUpdateObserver);
-       */
     }
-
-
-
-    /*
-    Observer<List<Event>> userListUpdateObserver = new Observer<List<Event>>() {
-        @Override
-        public void onChanged(List<Event> events) {
-            adaptor = new MyAdaptor(context,events);
-            recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            recyclerView.setAdapter(adaptor);
-        }
-    }; */
 
     }
 

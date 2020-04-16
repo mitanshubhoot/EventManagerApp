@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button coordinator;
     private Button volunteer;
     private Button participant;
-    private RelativeLayout logout ;
+    private TextView logout ;
     private static final String TAG = "MainActivity";
 
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         coordinator = (Button) findViewById(R.id.cord1);
         volunteer = (Button) findViewById(R.id.volu1);
         participant = (Button) findViewById(R.id.parti1);
-        logout = (RelativeLayout) findViewById(R.id.logout) ;
+        logout = findViewById(R.id.logout) ;
         sp1 = getSharedPreferences("Main Activity",MODE_PRIVATE);
         sp= getSharedPreferences("login",MODE_PRIVATE);
 

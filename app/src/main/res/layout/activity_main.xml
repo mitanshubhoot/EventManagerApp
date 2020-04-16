@@ -75,30 +75,38 @@
 
     />
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_save_att"
 
-        android:layout_width="130dp"
+        android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_alignRight="@id/ll"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
         app:cardBackgroundColor="@color/colorAccent"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="4dp">
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp"
+        android:layout_alignBottom="@+id/layout"
+
+
+
+        >
+
         <RelativeLayout
-            android:id="@+id/logout"
+
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:paddingTop="5dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
                 android:text="Log Out"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_marginHorizontal="5dp"
-                android:textColor="@color/colorWhite"
-                android:textSize="23dp"
+                android:textColor="#ffff"
+                android:textSize="20dp"
                 android:textStyle="bold" />
-
         </RelativeLayout>
+
     </androidx.cardview.widget.CardView>
 
 

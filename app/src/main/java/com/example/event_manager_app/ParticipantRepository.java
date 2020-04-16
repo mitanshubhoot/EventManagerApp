@@ -39,7 +39,12 @@ public class ParticipantRepository {
         return participantDao.getEventCodes(email);
     }
 
-    public List<Participant> getParticipants()
+    public void  AttendanceUpdater(boolean attendance , int id)
+    {
+        participantDao.AttendanceUpdater(attendance , id);
+    }
+
+    public LiveData<List<Participant>> getParticipants()
     {
         return participantDao.getParticipants();
     }

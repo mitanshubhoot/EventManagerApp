@@ -37,6 +37,9 @@ public class Participant {
     @ColumnInfo
     long contact;
 
+    @ColumnInfo
+    boolean attendance;
+
 
     public static final  String participants = "participants_table";
 
@@ -52,6 +55,7 @@ public class Participant {
         this.year = year;
         this.email = email;
         this.contact = contact;
+        this.attendance = false;
 
     }
 
@@ -71,6 +75,15 @@ public class Participant {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public boolean isAttendance() {
+        return attendance;
+    }
+
+
+    public void setAttendance(boolean attendance) {
+        this.attendance = attendance;
     }
 
     public String getEvent_code() {
