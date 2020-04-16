@@ -30,6 +30,11 @@ public class EventRepository {
         participantEventData = eventDao.getAllEvents(codes);
         return participantEventData;
     }
+
+    public LiveData<List<Event>> getEvents(String email)
+    {
+        return eventDao.getEvents(email);
+    }
     public void insert(Event e)
     {
         eventDao.insert(e);

@@ -40,6 +40,14 @@ public class EventViewModel extends AndroidViewModel {
 
      }
 
+
+    public LiveData<List<Event>> getEvents(String email)
+    {
+
+        return eventRepository.getEvents(email);
+
+    }
+
      public void insert(Event e)
      {
          eventRepository.insert(e);

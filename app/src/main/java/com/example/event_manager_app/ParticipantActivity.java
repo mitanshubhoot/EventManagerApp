@@ -2,7 +2,6 @@ package com.example.event_manager_app;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.MediatorLiveData;
@@ -11,6 +10,7 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ParticipantActivity extends AppCompatActivity {
@@ -39,11 +39,21 @@ public class ParticipantActivity extends AppCompatActivity {
         final EventAdaptor adaptor = new EventAdaptor();
         recyclerView.setAdapter(adaptor);
 
-        Log.d("partcipant activity", "hii"+ emodel.getAllEvents(codes).getValue());
+        List<String> mlist = new ArrayList<>();
+        mlist.add("TC-01");
+
+        Log.d("partcipant activity", "hii"+ emodel.getEvents(currentUserEmail).getValue() + currentUserEmail);
         List<Event> initial = emodel.getInitialStatus();
         Log.d("partcipant activity", "initial status "+(initial.size()));
-        Log.d("codes","codes are "+codes);
+        Log.d("codes"," " + adaptor.getItemCount() + emodel.getAllEvents(mlist).getValue() );
 
+        emodel.getAllEvents(mlist).observe(this, new Observer<List<Event>>() {
+            @Override
+            public void onChanged(List<Event> events) {
+                adaptor.setEvents(events);
+            }
+        });
+        /*
         emodel.getAllEvents(codes).observe(this, new Observer<List<Event>>() {
                     @Override
                     public void onChanged(List<Event> events) {
@@ -55,7 +65,7 @@ public class ParticipantActivity extends AppCompatActivity {
                         Log.d("partcipant activity", "hii");
 
                     }
-                });
+                });   */
     }
 
     }

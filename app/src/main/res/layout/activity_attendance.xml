@@ -7,7 +7,7 @@
     tools:context=".CoordinatorActivity"
     android:background="@drawable/back"
 
-    android:padding="20dp">
+    android:padding="25dp">
 
     <ImageView
         android:id="@+id/logo"
@@ -30,9 +30,13 @@
             android:id="@+id/list_volunteers_attendance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fadingEdge="horizontal"
             android:orientation="vertical"
+            android:outlineSpotShadowColor="@color/colorGrey"
             android:scrollbars="vertical"
             tools:listitem="@layout/layout_participant"
+            android:layoutAnimation="@anim/layout_animation_slide_right"
+
 
             >
 
