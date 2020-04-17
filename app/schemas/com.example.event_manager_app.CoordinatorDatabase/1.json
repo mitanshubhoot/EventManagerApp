@@ -1,0 +1,46 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "19f2c12c9f33a4ada9b19559f9fe968a",
+    "entities": [
+      {
+        "tableName": "Coordinators",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`email_coord` TEXT NOT NULL, `name` TEXT, `number` INTEGER NOT NULL, PRIMARY KEY(`email_coord`))",
+        "fields": [
+          {
+            "fieldPath": "email_coord",
+            "columnName": "email_coord",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "number",
+            "columnName": "number",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "email_coord"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '19f2c12c9f33a4ada9b19559f9fe968a')"
+    ]
+  }
+}
