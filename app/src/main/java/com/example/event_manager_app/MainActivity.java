@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "signOut: User signed out");
                 goToLoginActivity();
                 Log.d(TAG, "go to login");
+                sp.edit().putBoolean("logged",false).apply();
             }
         });
 
