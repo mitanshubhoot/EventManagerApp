@@ -7,7 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,9 +16,9 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     SharedPreferences sp;
     SharedPreferences sp1;
-    private Button coordinator;
-    private Button volunteer;
-    private Button participant;
+    private ImageView coordinator;
+    private ImageView volunteer;
+    private ImageView participant;
     private TextView logout ;
     private static final String TAG = "MainActivity";
 
@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        coordinator = (Button) findViewById(R.id.cord1);
-        volunteer = (Button) findViewById(R.id.volu1);
-        participant = (Button) findViewById(R.id.parti1);
+        coordinator =  findViewById(R.id.coord);
+        volunteer = findViewById(R.id.volunteer);
+        participant =  findViewById(R.id.parti);
         logout = findViewById(R.id.logout) ;
         sp1 = getSharedPreferences("Main Activity",MODE_PRIVATE);
         sp= getSharedPreferences("login",MODE_PRIVATE);
@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         final String currentUserEmail = getIntent().getStringExtra("email");
 
         Log.i("email" , "my email = " + currentUserEmail );
-
 
 
         coordinator.setOnClickListener(new View.OnClickListener() {

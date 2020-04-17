@@ -20,9 +20,10 @@
             android:background="@color/colorWhite">
             <ImageView
                 android:id="@+id/icon1"
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/icon"
+                android:layout_gravity="center_vertical"
                 ></ImageView>
             <TextView
                 android:id="@+id/volu_name"

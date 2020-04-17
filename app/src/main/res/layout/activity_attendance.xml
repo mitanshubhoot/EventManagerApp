@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CoordinatorActivity"
-    android:background="@drawable/back2"
+    android:background="@drawable/back"
 
     android:padding="5dp">
 
@@ -35,6 +35,7 @@
             android:outlineSpotShadowColor="@color/colorGrey"
             android:scrollbars="vertical"
             tools:listitem="@layout/layout_participant"
+            android:layoutAnimation="@anim/layout_animation_slide_right"
 
 
 

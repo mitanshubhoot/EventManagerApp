@@ -2,11 +2,13 @@
 <resources>
     <color name="colorPrimary">#171A1A</color>
     <color name="colorPrimaryDark">#06020C</color>
-    <color name="colorAccent">#6710A5</color>
+    <color name="colorAccent">#ff3d00</color>
     <color name="colorTitle">#313131</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorCardViewBackground">#E9EAED</color>
-    <color name="colorLightPurple">#9A75DD</color>
+    <color name="colorLight">#618685</color>
     <color name="colorGrey">#212122</color>
-    <color name="colorDarkPurple">#301561</color>
+    <color name="colorDark">#182c25</color>
+    <color name="colorMedium">#00695c</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>
