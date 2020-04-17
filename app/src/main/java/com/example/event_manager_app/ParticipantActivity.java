@@ -1,16 +1,14 @@
 package com.example.event_manager_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.MediatorLiveData;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ParticipantActivity extends AppCompatActivity {
@@ -18,8 +16,8 @@ public class ParticipantActivity extends AppCompatActivity {
     private EventViewModel emodel ;
     private RecyclerView recyclerView;
     private List<String> codes;
-    private MediatorLiveData<List<Event>> mediatorLiveData = new MediatorLiveData<>();
-    private ParticipantActivity context;
+    private List<Event> events;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +25,6 @@ public class ParticipantActivity extends AppCompatActivity {
         setContentView(R.layout.activity_participant);
         final String currentUserEmail = getIntent().getStringExtra("pemail");
         pmodel = ViewModelProviders.of(this, new ParticipantViewModel.Factory(getApplicationContext())).get(ParticipantViewModel.class);
-        //emodel = ViewModelProviders.of(this, new EventViewModel.Factory(getApplicationContext())).get(EventViewModel.class);
         emodel = ViewModelProviders.of(this ).get( EventViewModel.class);
         recyclerView = (RecyclerView) findViewById(R.id.list_events);
 
@@ -39,33 +36,27 @@ public class ParticipantActivity extends AppCompatActivity {
         final EventAdaptor adaptor = new EventAdaptor();
         recyclerView.setAdapter(adaptor);
 
-        List<String> mlist = new ArrayList<>();
-        mlist.add("TC-01");
+        events = emodel.getEvents(codes);
+        adaptor.setEvents(events);
 
-        Log.d("partcipant activity", "hii"+ emodel.getEvents(currentUserEmail).getValue() + currentUserEmail);
-        List<Event> initial = emodel.getInitialStatus();
-        Log.d("partcipant activity", "initial status "+(initial.size()));
-        Log.d("codes"," " + adaptor.getItemCount() + emodel.getAllEvents(mlist).getValue() );
-
-        emodel.getAllEvents(mlist).observe(this, new Observer<List<Event>>() {
+        adaptor.setOnItemEventClickListener(new EventAdaptor.onItemEventClickListener() {
             @Override
-            public void onChanged(List<Event> events) {
-                adaptor.setEvents(events);
+            public void onItemEventClick(Event event) {
+                Intent i = new Intent(ParticipantActivity.this , EventDetailsActivity.class);
+                i.putExtra(EventDetailsActivity.E_NAME, event.getEvent_name());
+                i.putExtra(EventDetailsActivity.E_CODE, event.getEvent_code());
+                i.putExtra(EventDetailsActivity.E_DATE , event.getDate());
+                i.putExtra(EventDetailsActivity.E_RUNNER_PRIZE, event.getWinner_prize());
+                i.putExtra(EventDetailsActivity.E_WINNER_PRIZE, event.getRunner_prize());
+                i.putExtra(EventDetailsActivity.E_VENUE, event.getVenue());
+                i.putExtra(EventDetailsActivity.E_EMAIL, event.getEmail_coord());
+                Log.d("Event" , "h"+ event.getEvent_name());
+
+                startActivity(i);
             }
         });
-        /*
-        emodel.getAllEvents(codes).observe(this, new Observer<List<Event>>() {
-                    @Override
-                    public void onChanged(List<Event> events) {
-                        //update recycler view
-                        adaptor.setEvents(events);
-                        //Toast.makeText(ParticipantActivity.this , "Onchanged",Toast.LENGTH_SHORT).show();
-                        Toast.makeText(getBaseContext(), "observer" +
-                                " " , Toast.LENGTH_LONG).show();
-                        Log.d("partcipant activity", "hii");
 
-                    }
-                });   */
+
     }
 
     }

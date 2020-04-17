@@ -1,5 +1,6 @@
 package com.example.event_manager_app;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import java.util.List;
 
 class EventAdaptor extends RecyclerView.Adapter<EventAdaptor.ViewHolder> {
     private List<Event> events = new ArrayList<>();
+    private onItemEventClickListener listener;
+
     @NonNull
     @Override
     public EventAdaptor.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -29,7 +32,7 @@ class EventAdaptor extends RecyclerView.Adapter<EventAdaptor.ViewHolder> {
     }
     public void setEvents(List<Event> events)
     {
-        this.events =events;
+        this.events = events;
         notifyDataSetChanged();
     }
 
@@ -45,6 +48,25 @@ class EventAdaptor extends RecyclerView.Adapter<EventAdaptor.ViewHolder> {
             super(itemView);
             event_name = (TextView) itemView.findViewById(R.id.event_name_l);
             event_date = (TextView) itemView.findViewById(R.id.date_l);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    if (listener != null && position != RecyclerView.NO_POSITION) {
+                        listener.onItemEventClick(events.get(position));
+                        Log.d("Event" , " selected"+events.get(position).getEvent_name());
+
+                    }
+                }
+            });
         }
+    }
+
+    public interface onItemEventClickListener {
+        void onItemEventClick(Event event);
+    }
+
+    public void setOnItemEventClickListener( onItemEventClickListener listener) {
+        this.listener = listener;
     }
 }
