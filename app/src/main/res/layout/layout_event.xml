@@ -33,7 +33,7 @@
             android:layout_height="80dp"
             android:hint="Event Name "
             android:layout_weight="1"
-            android:textSize="17dp"
+            android:textSize="20dp"
             android:gravity="center"
             android:textStyle="bold"
             android:layout_marginLeft="20dp"

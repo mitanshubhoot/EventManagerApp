@@ -47,7 +47,7 @@ public abstract class EventDatabase extends RoomDatabase {
         @Override
         protected Void doInBackground(Void... voids) {
             Event e1 = new Event("TC-01","Hackathon","oswalsakshi17@gmail.com",70000 , 50000 , 400 , "12/9/2020","Room : 1323A" , "Technical");
-            Event e2 = new Event("TC-02","Competetive-Coding","oswalsakshi17@gmail.com",90000 , 30000 , 200 , "15/9/2020","Room : 1324D" , "Technical");
+            Event e2 = new Event("TC-02","Competetive-\nCoding","oswalsakshi17@gmail.com",90000 , 30000 , 200 , "15/9/2020","Room : 1324D" , "Technical");
             Event e3 = new Event("TC-03","Byte-Code","oswalsakshi17@gmail.com",10000 , 5000 , 50 , "17/9/2020","Room : 2111" , "Technical");
             eventDao.insert(e1);
             eventDao.insert(e2);

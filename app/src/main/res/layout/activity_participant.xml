@@ -32,7 +32,8 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:scrollbars="vertical"
-            tools:listitem="@layout/layout_event">
+            tools:listitem="@layout/layout_event"
+            android:layoutAnimation="@anim/layout_animation_from_bottom">
 
         </androidx.recyclerview.widget.RecyclerView>
     </RelativeLayout>

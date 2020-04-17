@@ -7,8 +7,17 @@
     android:padding = "30dp"
     >
 
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="130dp"
+        android:src="@drawable/front" />
+
     <LinearLayout
         android:id="@+id/ll"
+        android:paddingTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="20dp"
@@ -27,6 +36,8 @@
             android:layout_gravity="center_horizontal"
             app:cardBackgroundColor="@color/colorWhite"
             app:cardCornerRadius="25dp"
+            android:elevation="50dp"
+            app:cardElevation="20dp"
 
 
             >
@@ -47,13 +58,13 @@
                     android:id="@+id/cord1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
+                    android:paddingBottom="20dp"
                     android:text="Coordinator"
                     android:textStyle="bold"
 
                     android:inputType="textEmailAddress"
                     android:textColor="@color/colorDark"
-                    android:textSize="15dp"
+                    android:textSize="18dp"
                     android:gravity="center"/>
             </LinearLayout>
 
@@ -67,6 +78,8 @@
             android:layout_gravity="center_horizontal"
             app:cardBackgroundColor="@color/colorWhite"
             app:cardCornerRadius="25dp"
+            android:elevation="50dp"
+            app:cardElevation="20dp"
 
             >
             <LinearLayout
@@ -79,14 +92,15 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:padding="15dp"
-                    android:src="@drawable/volunteer"
+                    android:src="@drawable/volunteer1"
                     />
 
                 <TextView
                     android:id="@+id/volu1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
+                    android:paddingBottom="20dp"
+
                     android:text="Volunteer"
                     android:textStyle="bold"
                     android:inputType="textEmailAddress"
@@ -105,6 +119,8 @@
             android:layout_gravity="center_horizontal"
             app:cardBackgroundColor="@color/colorWhite"
             app:cardCornerRadius="25dp"
+            android:elevation="50dp"
+            app:cardElevation="20dp"
 
             >
             <LinearLayout
@@ -126,12 +142,12 @@
                     android:id="@+id/parti1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
+                   android:paddingBottom="15dp"
                     android:text="Partcipant"
                     android:inputType="textEmailAddress"
                     android:textStyle="bold"
                     android:textColor="@color/colorDark"
-                    android:textSize="17dp"
+                    android:textSize="18dp"
                     android:gravity="center"/>
             </LinearLayout>
 
