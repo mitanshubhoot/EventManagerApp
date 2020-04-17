@@ -17,6 +17,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     SharedPreferences sp;
     SharedPreferences sp1;
+    SharedPreferences useremail;
     private EditText mEmail, mPassword;
     private TextView mlogin;
     private ProgressBar mProgressBar;
@@ -35,6 +36,8 @@ public class RegisterActivity extends AppCompatActivity {
         mEmail = (EditText) findViewById(R.id.username_r) ;
         mPassword = (EditText) findViewById(R.id.password_r) ;
         mProgressBar = (ProgressBar) findViewById(R.id.loading) ;
+        useremail = getSharedPreferences("useremail",MODE_PRIVATE);
+
 
 
         userViewModel = ViewModelProviders.of(this, new LoginViewModel.Factory(getApplicationContext())).get(LoginViewModel.class);
@@ -64,6 +67,8 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), "Successfully Created An Account!", Toast.LENGTH_LONG).show();
                     goToMainActivity(email);
                     sp.edit().putBoolean("logged",true).apply();
+                    useremail.edit().putString("user-email",email).apply();
+
                     finish();
                 }
                 else

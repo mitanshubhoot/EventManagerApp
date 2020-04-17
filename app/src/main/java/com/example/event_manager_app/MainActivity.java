@@ -16,6 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     SharedPreferences sp;
     SharedPreferences sp1;
+    SharedPreferences useremail;
+
     private ImageView coordinator;
     private ImageView volunteer;
     private ImageView participant;
@@ -35,8 +37,11 @@ public class MainActivity extends AppCompatActivity {
         logout = findViewById(R.id.logout) ;
         sp1 = getSharedPreferences("Main Activity",MODE_PRIVATE);
         sp= getSharedPreferences("login",MODE_PRIVATE);
+        useremail = getSharedPreferences("useremail",MODE_PRIVATE);
 
-        final String currentUserEmail = getIntent().getStringExtra("email");
+
+        //final String currentUserEmail = getIntent().getStringExtra("email");
+        final String currentUserEmail = useremail.getString("user-email",null);
 
         Log.i("email" , "my email = " + currentUserEmail );
 

@@ -18,6 +18,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     SharedPreferences sp;
+    SharedPreferences useremail;
     private EditText mEmail, mPassword;
     private TextView mRegisterTextView;
     private ProgressBar mProgressBar;
@@ -36,6 +37,8 @@ public class LoginActivity extends AppCompatActivity {
         mProgressBar = (ProgressBar) findViewById(R.id.loading) ;
 
         sp = getSharedPreferences("login",MODE_PRIVATE);
+        useremail = getSharedPreferences("useremail",MODE_PRIVATE);
+
 
         userViewModel = ViewModelProviders.of(this, new LoginViewModel.Factory(getApplicationContext())).get(LoginViewModel.class);
 
@@ -62,6 +65,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), "Successfully Logged In!", Toast.LENGTH_LONG).show();
                     goToMainActivity(mEmail.getText().toString());
                     sp.edit().putBoolean("logged",true).apply();
+                    useremail.edit().putString("user-email",mEmail.getText().toString()).apply();
                     finish();
                 }
                 else
