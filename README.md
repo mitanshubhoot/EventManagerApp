@@ -3,7 +3,7 @@ Repository  for DBMS Course Project
 
 An app that will be very useful for events like Melange or Vishwakarandak in VIT college , can also be used by various clubs of the college for better Event Management.    
   
-**Users :  **  
+**Users :**    
 Participant , Coordinator , Volunteer     
     
 **Features of App :**    
@@ -17,7 +17,7 @@ Participant , Coordinator , Volunteer
 **Framework :**       
 Android Studio  
   
-**Language : **      
+**Language :**        
 Java  
 
 **Back end technology :**     
