@@ -36,7 +36,7 @@ public class AddParticipantActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(!email.getText().toString().equals("") && !event_code.getText().toString().equals("")) {
                     pmodel.addParticipant(name.getText().toString(), event_code.getText().toString(),college.getText().toString(),year.getText().toString() , email.getText().toString(), Long.parseLong(contact.getText().toString()));
-                    Toast.makeText(getBaseContext(), "participant added ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getBaseContext(), "participant successful added ", Toast.LENGTH_SHORT).show();
                 }
             }
         });
