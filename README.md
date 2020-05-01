@@ -12,7 +12,8 @@ Participant , Coordinator , Volunteer
 3.Coordinator  has access to increase volunteer’s working hours for easy monitoring .  
 4.Volunteer can keep count of the participants registered .  
 5.Volunteer has feature to add participants   
-6.Volunteers can mark attendance of participants to keep track of success of event.    
+6.Volunteers can mark attendance of participants to keep track of success of event.
+7.Participants can explore more events.
   
 **Framework :**       
 Android Studio  
