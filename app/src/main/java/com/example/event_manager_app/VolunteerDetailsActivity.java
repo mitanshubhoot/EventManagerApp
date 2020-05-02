@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class VolunteerDetailsActivity extends AppCompatActivity {
+
     private TextView name ;
     private TextView email ;
     private TextView contact;
@@ -26,6 +27,7 @@ public class VolunteerDetailsActivity extends AppCompatActivity {
     public static final String V_ID = "id";
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_volunteer_details);
@@ -36,6 +38,7 @@ public class VolunteerDetailsActivity extends AppCompatActivity {
         save = findViewById(R.id.Save);
         add = findViewById(R.id.add_vol);
         sub = findViewById(R.id.sub_vol);
+
 
         Intent intent = new Intent();
         name.setText(String.valueOf(getIntent().getStringExtra(V_NAME)));
@@ -58,6 +61,7 @@ public class VolunteerDetailsActivity extends AppCompatActivity {
             }
         });
 
+
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,6 +80,7 @@ public class VolunteerDetailsActivity extends AppCompatActivity {
 
 
     }
+
     @Override
     public void onStart() {
 
@@ -99,6 +104,7 @@ public class VolunteerDetailsActivity extends AppCompatActivity {
         email.setText(memail);
 
 
+
         long mcontact = getIntent().getLongExtra(V_CONTACT,-1);
         if (mcontact < 0){
             mcontact = Long.parseLong(getIntent().getStringExtra(V_CONTACT));
@@ -117,6 +123,7 @@ public class VolunteerDetailsActivity extends AppCompatActivity {
 
 
     }
+
 
 
     public  void SaveInfoVolunteer(int id)
