@@ -32,8 +32,6 @@ public class ParticipantActivity extends AppCompatActivity {
 
         recyclerView.setHasFixedSize(true);
          codes = pmodel.getEventCodes(currentUserEmail);
-        Log.d("codes" , "h"+ codes.size() +"  "+ codes);
-
 
         final EventAdaptor adaptor = new EventAdaptor();
         recyclerView.setAdapter(adaptor);
