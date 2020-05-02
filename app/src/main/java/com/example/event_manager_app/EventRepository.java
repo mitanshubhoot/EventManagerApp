@@ -18,6 +18,11 @@ public class EventRepository {
     {
         return eventDao.getEvents(codes);
     }
+    public List<Event> getExploreEvents(List<String> codes)
+    {
+        return eventDao.getExploreEvents(codes);
+    }
+
     public void insert(Event e)
     {
         eventDao.insert(e);
@@ -25,3 +30,4 @@ public class EventRepository {
 
 
 }
+
