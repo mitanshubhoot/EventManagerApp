@@ -7,8 +7,10 @@ import androidx.room.PrimaryKey;
 
 import static com.example.event_manager_app.Event.table_name;
 
+
 @Entity(tableName = table_name)
 public class Event {
+
     @NonNull
     @PrimaryKey
     String event_code;
@@ -30,12 +32,15 @@ public class Event {
     String domain;
 
 
+
     public static String getTable_name() {
         return table_name;
     }
 
 
+
     public static final String table_name = "events_table";
+
 
 
 
@@ -43,15 +48,19 @@ public class Event {
         return domain;
     }
 
+
     public void setDomain(String domain) {
         this.domain = domain;
     }
 
+
     public Event() {
 
     }
+
     public Event(String event_code ,String event_name ,String email_coord ,long winner_prize,long runner_prize ,long entry_fee ,String date , String venue , String domain)
     {
+
         this.event_name = event_name;
         this.event_code = event_code;
         this.email_coord = email_coord;
@@ -62,6 +71,7 @@ public class Event {
         this.venue = venue;
         this.domain = domain;
     }
+
 
     public String getEvent_code() {
         return event_code;
