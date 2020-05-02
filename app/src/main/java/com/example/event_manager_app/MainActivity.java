@@ -25,10 +25,9 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         coordinator =  findViewById(R.id.coord);
@@ -52,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 goToCoordinatorActivity(currentUserEmail);
             }
         });
+
         volunteer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 goToParticipantOptionsActivity(currentUserEmail);
             }
         });
+
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
     public void onStart() {
 
         super.onStart();
@@ -112,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
         super.onBackPressed();
         finish();
     }
+
 
 
 }
