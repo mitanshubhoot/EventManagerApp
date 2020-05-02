@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+
+
 public class ExploreActivty extends AppCompatActivity {
     private ParticipantViewModel pmodel;
     private EventViewModel emodel ;
@@ -19,29 +21,36 @@ public class ExploreActivty extends AppCompatActivity {
     private List<Event> events;
 
 
+
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final String currentUserEmail = getIntent().getStringExtra("explore_email");
         setContentView(R.layout.activity_explore_activty);
 
         pmodel = ViewModelProviders.of(this, new ParticipantViewModel.Factory(getApplicationContext())).get(ParticipantViewModel.class);
+
         emodel = ViewModelProviders.of(this ).get( EventViewModel.class);
+
         recyclerView = (RecyclerView) findViewById(R.id.list_explore_events);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         Log.d("email" , "h"+ currentUserEmail);
 
 
+
         recyclerView.setHasFixedSize(true);
         codes = pmodel.getEventCodes(currentUserEmail);
         Log.d("codes" , "h"+ codes.size() +"  "+ codes);
+
 
         final EventAdaptor adaptor = new EventAdaptor();
         recyclerView.setAdapter(adaptor);
 
         events = emodel.getExploreEvents(codes);
         adaptor.setEvents(events);
+
 
 
         adaptor.setOnItemEventClickListener(new EventAdaptor.onItemEventClickListener() {
