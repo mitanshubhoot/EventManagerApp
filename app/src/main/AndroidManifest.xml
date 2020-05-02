@@ -13,9 +13,12 @@
 
         <activity android:name=".AttendanceActivity"></activity>
         <activity android:name=".AddParticipantActivity" />
+        <activity android:name=".ExploreEventsActivity" />
+        <activity android:name=".ExploreActivty" />
         <activity android:name=".VolunteerDetailsActivity" />
         <activity android:name=".EventDetailsActivity" />
         <activity android:name=".ParticipantActivity" />
+        <activity android:name=".PartcipantOptionActivity" />
         <activity android:name=".VolunteerActivity" />
         <activity android:name=".CoordinatorActivity" />
         <activity android:name=".LoginActivity" />
