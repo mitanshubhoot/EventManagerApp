@@ -22,6 +22,8 @@ public class Coordinator {
     String name;
     @ColumnInfo
     long number;
+    @ColumnInfo
+    String Domain;
 
     @Ignore
     public Coordinator()

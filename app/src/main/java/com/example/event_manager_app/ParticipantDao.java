@@ -20,6 +20,7 @@ public interface ParticipantDao {
     @Query("SELECT DISTINCT(event_code) FROM participants_table where participants_table.email = :email")
     List<String> getEventCodes(String email);
 
+
     @Query("SELECT * FROM participants_table")
     LiveData<List<Participant>> getParticipants();
 
