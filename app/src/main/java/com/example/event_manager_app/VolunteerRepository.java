@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData;
 import java.util.List;
 
 public class VolunteerRepository {
+
     private final VolunteerDao volunteerDao;
     private static VolunteerRepository instance;
     public VolunteerRepository(VolunteerDao volunteerDao)
@@ -13,6 +14,7 @@ public class VolunteerRepository {
     }
     public static VolunteerRepository getInstance(VolunteerDao volunteerDao)
     {
+
         if(instance == null)
         {
             instance = new VolunteerRepository(volunteerDao);
@@ -24,10 +26,13 @@ public class VolunteerRepository {
         return  volunteerDao.getAllVolunteers(email);
     }
 
+
     public void update_hours(int id , int hours)
     {
+
         volunteerDao.update_hours(id ,  hours);
         return;
+
 
     }
 
