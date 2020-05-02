@@ -13,7 +13,7 @@ Participant , Coordinator , Volunteer
 4.Volunteer can keep count of the participants registered .  
 5.Volunteer has feature to add participants   
 6.Volunteers can mark attendance of participants to keep track of success of event.  
-7.Participants can explore more events.  
+7.Participants can explore more events and get details about new events like its winning prize , entry fees , description of event ,domain and coordinator's email id for further contact. 
   
 **Framework :**       
 Android Studio  
