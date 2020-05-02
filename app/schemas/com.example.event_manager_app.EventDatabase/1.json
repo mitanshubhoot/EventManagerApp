@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "9c6ebc6105ac7e69c67375032b9e3c0e",
+    "identityHash": "35d8b77a4fd16be6e1c94725b80e2c88",
     "entities": [
       {
         "tableName": "events_table",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`event_code` TEXT NOT NULL, `event_name` TEXT, `email_coord` TEXT, `Winner_prize` INTEGER NOT NULL, `Runner_prize` INTEGER NOT NULL, `entry_fee` INTEGER NOT NULL, `date` TEXT, `venue` TEXT, `domain` TEXT, PRIMARY KEY(`event_code`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`event_code` TEXT NOT NULL, `event_name` TEXT, `email_coord` TEXT, `Winner_prize` INTEGER NOT NULL, `Runner_prize` INTEGER NOT NULL, `entry_fee` INTEGER NOT NULL, `date` TEXT, `venue` TEXT, `domain` TEXT, `description` TEXT, `no_of_participants` INTEGER NOT NULL, PRIMARY KEY(`event_code`))",
         "fields": [
           {
             "fieldPath": "event_code",
@@ -61,6 +61,18 @@
             "columnName": "domain",
             "affinity": "TEXT",
             "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "no_of_participants",
+            "columnName": "no_of_participants",
+            "affinity": "INTEGER",
+            "notNull": true
           }
         ],
         "primaryKey": {
@@ -76,7 +88,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '9c6ebc6105ac7e69c67375032b9e3c0e')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '35d8b77a4fd16be6e1c94725b80e2c88')"
     ]
   }
 }
