@@ -9,10 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PartcipantOptionActivity"></activity>
-        <activity android:name=".ExploreActivty" />
-        <activity android:name=".ExploreEventsActivity" />
-        <activity android:name=".AttendanceActivity" />
+        <activity android:name=".AttendanceActivity"></activity>
         <activity android:name=".AddParticipantActivity" />
         <activity android:name=".VolunteerDetailsActivity" />
         <activity android:name=".EventDetailsActivity" />
