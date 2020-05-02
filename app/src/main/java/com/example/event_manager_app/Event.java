@@ -7,10 +7,8 @@ import androidx.room.PrimaryKey;
 
 import static com.example.event_manager_app.Event.table_name;
 
-
 @Entity(tableName = table_name)
 public class Event {
-
     @NonNull
     @PrimaryKey
     String event_code;
@@ -30,7 +28,19 @@ public class Event {
     String venue;
     @ColumnInfo
     String domain;
+    @ColumnInfo
+    String description;
 
+    public int getNo_of_participants() {
+        return no_of_participants;
+    }
+
+    public void setNo_of_participants(int no_of_participants) {
+        this.no_of_participants = no_of_participants;
+    }
+
+    @ColumnInfo
+    int no_of_participants;
 
 
     public static String getTable_name() {
@@ -38,9 +48,7 @@ public class Event {
     }
 
 
-
     public static final String table_name = "events_table";
-
 
 
 
@@ -48,19 +56,15 @@ public class Event {
         return domain;
     }
 
-
     public void setDomain(String domain) {
         this.domain = domain;
     }
 
-
     public Event() {
 
     }
-
-    public Event(String event_code ,String event_name ,String email_coord ,long winner_prize,long runner_prize ,long entry_fee ,String date , String venue , String domain)
+    public Event(String event_code ,String event_name ,int no ,String email_coord ,long winner_prize,long runner_prize ,long entry_fee ,String date , String venue , String domain , String description)
     {
-
         this.event_name = event_name;
         this.event_code = event_code;
         this.email_coord = email_coord;
@@ -70,8 +74,9 @@ public class Event {
         this.date = date ;
         this.venue = venue;
         this.domain = domain;
+        this.description = description;
+        this.no_of_participants = no;
     }
-
 
     public String getEvent_code() {
         return event_code;
@@ -135,5 +140,13 @@ public class Event {
 
     public void setVenue(String venue) {
         this.venue = venue;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
