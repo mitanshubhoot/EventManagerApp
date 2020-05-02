@@ -9,10 +9,15 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
+
 @Database(entities = Volunteer.class , version = 1)
+
 public abstract class VolunteerDatabase extends RoomDatabase {
     public abstract VolunteerDao VolunteerDao();
     public static VolunteerDatabase INSTANCE;
+
+
+
 
     public static VolunteerDatabase getVolunteerDatabase(Context context)
     {
@@ -25,6 +30,7 @@ public abstract class VolunteerDatabase extends RoomDatabase {
         return INSTANCE;
 
     }
+
     public static RoomDatabase.Callback roomcallback = new RoomDatabase.Callback(){
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
@@ -32,6 +38,7 @@ public abstract class VolunteerDatabase extends RoomDatabase {
             new PopulateVolunteerDB(INSTANCE).execute();
         }
     };
+
     public static class PopulateVolunteerDB extends AsyncTask<Void ,Void ,Void>
     {
         private VolunteerDao volunteerDao;
@@ -41,6 +48,8 @@ public abstract class VolunteerDatabase extends RoomDatabase {
         }
 
         @Override
+
+
         protected Void doInBackground(Void... voids) {
             Volunteer v1 = new Volunteer("Ashok Gandhi","ashok.gandhi18@vit.edu","oswalsakshi17@gmail.com",7796534008l,0);
             Volunteer v2 = new Volunteer("Dev Patil","dev.patil17@vit.edu","oswalsakshi17@gmail.com",6702394567l,0);
@@ -53,6 +62,8 @@ public abstract class VolunteerDatabase extends RoomDatabase {
             Volunteer v9 = new Volunteer("Arya Patil","arya.patil18@vit.edu","oswalsakshi17@gmail.com",8904673305l,0);
             Volunteer v10 = new Volunteer("Vishesh Jha","vishesh.jha1993@gmail.com","oswalsakshi17@gmail.com",98788645312l,0);
             Volunteer v11 = new Volunteer("Sumit Jain","sumit.jain16@vit.edu","oswalsakshi17@gmail.com",967942118455l,0);
+
+
 
             volunteerDao.insert(v1);
             volunteerDao.insert(v2);
@@ -74,6 +85,7 @@ public abstract class VolunteerDatabase extends RoomDatabase {
         }
     }
 
+
     public static void destroyInstance()
     {
         INSTANCE = null;
@@ -81,3 +93,4 @@ public abstract class VolunteerDatabase extends RoomDatabase {
 
 
 }
+
