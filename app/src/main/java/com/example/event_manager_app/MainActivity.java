@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         participant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToParticipantActivity(currentUserEmail);
+                goToParticipantOptionsActivity(currentUserEmail);
             }
         });
 
@@ -102,9 +102,9 @@ public class MainActivity extends AppCompatActivity {
         i.putExtra("cemail",currentUserEmail);
         startActivity(i);
     }
-    public void goToParticipantActivity(String currentUserEmail){
-        Intent i = new Intent(this,ParticipantActivity.class);
-        i.putExtra("pemail",currentUserEmail);
+    public void goToParticipantOptionsActivity(String currentUserEmail){
+        Intent i = new Intent(this, PartcipantOptionActivity.class);
+        i.putExtra("poemail",currentUserEmail);
         startActivity(i);
     }
     @Override

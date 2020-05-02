@@ -19,6 +19,12 @@ public class EventViewModel extends AndroidViewModel {
 
     }
 
+    public List<Event> getExploreEvents(List<String> codes)
+    {
+
+        return eventRepository.getExploreEvents(codes);
+
+    }
 
 
     public List<Event> getEvents(List<String> codes)
@@ -28,10 +34,10 @@ public class EventViewModel extends AndroidViewModel {
 
     }
 
-     public void insert(Event e)
-     {
-         eventRepository.insert(e);
-     }
+    public void insert(Event e)
+    {
+        eventRepository.insert(e);
+    }
 
 
 
