@@ -17,6 +17,9 @@ public interface ParticipantDao {
     @Query("SELECT COUNT(*) FROM participants_table")
     int count_participants();
 
+    @Query("SELECT COUNT(*) FROM participants_table where attendance = :t ")
+    int count_attendance_participants(boolean t);
+
     @Query("SELECT DISTINCT(event_code) FROM participants_table where participants_table.email = :email")
     List<String> getEventCodes(String email);
 
