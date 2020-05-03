@@ -17,6 +17,7 @@ public class VolunteerActivity extends AppCompatActivity {
     private Button attendance;
     private Button add;
     private TextView no_participants;
+    private TextView no_attended_participants;
     private ParticipantViewModel pmodel;
     private ProgressBar mProgressBar;
     @Override
@@ -26,6 +27,8 @@ public class VolunteerActivity extends AppCompatActivity {
         attendance = findViewById(R.id.attendance);
         add = findViewById(R.id.Add_parti);
         no_participants = (TextView)findViewById(R.id.no_of_participants);
+        no_attended_participants= (TextView)findViewById(R.id.attendees_count);
+
         mProgressBar = (ProgressBar)findViewById(R.id.loading_v);
         final String currentUserEmail = getIntent().getStringExtra("cemail");
 
@@ -36,6 +39,10 @@ public class VolunteerActivity extends AppCompatActivity {
 
         int count = pmodel.GetCountParticipant();
         no_participants.setText(Integer.toString(count));
+
+        int count_attendees = pmodel.GetCountAttendanceParticipant();
+        no_attended_participants.setText(Integer.toString(count_attendees));
+
         Log.i("count ", "updated");
         mProgressBar.setVisibility(View.INVISIBLE);
         Log.i("Progress bar ", "invisible");
@@ -69,5 +76,8 @@ public class VolunteerActivity extends AppCompatActivity {
         super.onResume();
         int count = pmodel.GetCountParticipant();
         no_participants.setText(Integer.toString(count));
+
+        int count_attendees = pmodel.GetCountAttendanceParticipant();
+        no_attended_participants.setText(Integer.toString(count_attendees));
     }
 }
