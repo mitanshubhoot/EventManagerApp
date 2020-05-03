@@ -25,6 +25,10 @@ public class ParticipantViewModel extends ViewModel {
     {
         return participantRepository.getCountParticipants();
     }
+    public int  GetCountAttendanceParticipant()
+    {
+        return participantRepository.getCountAttendanceParticipants();
+    }
     public List<String> getEventCodes(String email)
     {
         return participantRepository.getEventCodes(email);

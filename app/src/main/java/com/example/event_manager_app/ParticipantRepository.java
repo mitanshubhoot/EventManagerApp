@@ -34,6 +34,12 @@ public class ParticipantRepository {
     {
         return participantDao.count_participants();
     }
+
+    public int getCountAttendanceParticipants()
+    {
+        return participantDao.count_attendance_participants(true);
+    }
+
     public List<String> getEventCodes(String email)
     {
         return participantDao.getEventCodes(email);
