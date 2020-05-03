@@ -65,6 +65,8 @@ public class VolunteerDetailsActivity extends AppCompatActivity {
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int p = Integer.valueOf(publicity_hours.getText().toString()) - 1;
+                if(p>=0)
                 publicity_hours.setText( String.valueOf(Integer.valueOf(publicity_hours.getText().toString())-1) );
 
 
