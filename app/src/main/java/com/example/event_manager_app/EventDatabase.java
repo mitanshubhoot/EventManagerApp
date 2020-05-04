@@ -46,10 +46,10 @@ public abstract class EventDatabase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            Event e1 = new Event("TC-01","Hackathon",4,"oswalsakshi17@gmail.com",70000 , 50000 , 400 , "12/9/2020","Room : 1323A" , "Technical" , "This event is a hackathon to code,strategize and innovate some ingenious\n" +
+            Event e1 = new Event("TC-01","Hackathon",4,"oswalsakshi17@gmail.com",7000 , 5000 , 400 , "12/9/2020","Room : 1323A" , "Technical" , "This event is a hackathon to code,strategize and innovate some ingenious\n" +
                     "solutions to the most sought out real-life problem statements. This event is only for FY\n" +
                     "and SY students.");
-            Event e2 = new Event("TC-02","Competetive-\nCoding",2,"oswalsakshi17@gmail.com",90000 , 30000 , 200 , "15/9/2020","Room : 1324D" , "Technical"," This event is a hackathon to code,strategize and innovate some ingenious\n" +
+            Event e2 = new Event("TC-02","Competetive-\nCoding",2,"oswalsakshi17@gmail.com",9000 , 3000 , 200 , "15/9/2020","Room : 1324D" , "Technical"," This event is a hackathon to code,strategize and innovate some ingenious\n" +
                     "solutions to the most sought out real-life problem statements. This event is only for TY\n" +
                     "and B-Tech students.");
             Event e3 = new Event("TC-03","Byte-Code",2,"oswalsakshi17@gmail.com",8000 , 3000 , 50 , "15/6/2020","Room : 2111" , "Technical"," This event will test your basic concepts of Python language and\n" +

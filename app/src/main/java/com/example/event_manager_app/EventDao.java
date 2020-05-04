@@ -18,4 +18,7 @@ public interface EventDao {
 
     @Query("SELECT * FROM events_table WHERE (event_code NOT IN (:codes) ) AND domain=:t ")
     List<Event> getExploreEvents(List<String> codes , String t);
+
+    @Query("SELECT event_code FROM events_table WHERE event_code=:ev ")
+    String checkEventCode(String ev);
 }

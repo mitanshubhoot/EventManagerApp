@@ -21,6 +21,7 @@ public class AddParticipantActivity extends AppCompatActivity {
     private EditText contact ;
     private RelativeLayout Add;
     private ParticipantViewModel pmodel ;
+    private EventViewModel emodel ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,7 @@ public class AddParticipantActivity extends AppCompatActivity {
         contact = (EditText)findViewById(R.id.contact_ap);
         Add = (RelativeLayout) findViewById(R.id.add_p);
         pmodel = ViewModelProviders.of(this , new ParticipantViewModel.Factory(getApplicationContext())).get(ParticipantViewModel.class);
-
+        emodel = ViewModelProviders.of(this ).get( EventViewModel.class);
         Add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +42,7 @@ public class AddParticipantActivity extends AppCompatActivity {
                 Pattern p = Pattern.compile("[a-zA-Z]*");//to check special characters
                 Matcher m = p.matcher(mname);
 
-                if(!email.getText().toString().equals("") && !event_code.getText().toString().equals("") && m.matches()) {
+                if(!email.getText().toString().equals("") && !event_code.getText().toString().equals("") && m.matches() && emodel.isValidEventCode(event_code.getText().toString())) {
                     pmodel.addParticipant(name.getText().toString(), event_code.getText().toString(),college.getText().toString(),year.getText().toString() , email.getText().toString(), Long.parseLong(contact.getText().toString()));
                     Toast.makeText(getBaseContext(), "participant added ", Toast.LENGTH_SHORT).show();
                 }
