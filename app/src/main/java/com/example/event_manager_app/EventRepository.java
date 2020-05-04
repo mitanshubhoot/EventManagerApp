@@ -18,9 +18,9 @@ public class EventRepository {
     {
         return eventDao.getEvents(codes);
     }
-    public List<Event> getExploreEvents(List<String> codes)
+    public List<Event> getExploreEvents(List<String> codes , String t)
     {
-        return eventDao.getExploreEvents(codes);
+        return eventDao.getExploreEvents(codes , t);
     }
 
     public void insert(Event e)
