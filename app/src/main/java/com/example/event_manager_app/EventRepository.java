@@ -22,6 +22,20 @@ public class EventRepository {
     {
         return eventDao.getExploreEvents(codes , t);
     }
+    public boolean isValidEventCode(String ev)
+    {
+        String event_code = null;
+        try{
+            event_code = eventDao.checkEventCode(ev);
+        }
+        catch (RuntimeException r)
+        {
+
+        }
+        if(event_code==null )
+            return false;
+        return true;
+    }
 
     public void insert(Event e)
     {

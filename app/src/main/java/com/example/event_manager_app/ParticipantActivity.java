@@ -47,8 +47,8 @@ public class ParticipantActivity extends AppCompatActivity {
                 i.putExtra(EventDetailsActivity.E_NAME, event.getEvent_name());
                 i.putExtra(EventDetailsActivity.E_CODE, event.getEvent_code());
                 i.putExtra(EventDetailsActivity.E_DATE , event.getDate());
-                i.putExtra(EventDetailsActivity.E_RUNNER_PRIZE, event.getWinner_prize());
-                i.putExtra(EventDetailsActivity.E_WINNER_PRIZE, event.getRunner_prize());
+                i.putExtra(EventDetailsActivity.E_RUNNER_PRIZE, event.getRunner_prize());
+                i.putExtra(EventDetailsActivity.E_WINNER_PRIZE, event.getWinner_prize());
                 i.putExtra(EventDetailsActivity.E_VENUE, event.getVenue());
                 i.putExtra(EventDetailsActivity.E_EMAIL, event.getEmail_coord());
                 Log.d("Event" , "h"+ event.getEvent_name());

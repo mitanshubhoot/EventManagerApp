@@ -81,12 +81,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_gravity="center_horizontal"
-                    android:background="@color/transparent"
+                    android:background="@color/colorAccent"
                     android:text="Event Code"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/colorWhite"
                     android:gravity="center"
                     android:textSize="20dp"
                     android:textStyle="bold"
+
                     ></TextView>
 
                 <androidx.cardview.widget.CardView
@@ -130,9 +131,9 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@color/transparent"
+                    android:background="@color/colorAccent"
                     android:text="Date"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/colorWhite"
                     android:gravity="center"
                     android:textSize="20dp"
                     android:textStyle="bold"
@@ -191,10 +192,11 @@
                     android:layout_weight="1"
 
                     android:text="Winner Prize"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/colorWhite"
                     android:gravity="center"
                     android:textSize="20dp"
                     android:textStyle="bold"
+                    android:background="@color/colorAccent"
                     android:layout_gravity="center_horizontal"
                     ></TextView>
 
@@ -241,10 +243,11 @@
                     android:layout_weight="1"
 
                     android:text="Runner up Prize"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/colorWhite"
                     android:gravity="center"
                     android:textSize="20dp"
                     android:textStyle="bold"
+                    android:background="@color/colorAccent"
                     android:layout_gravity="center_horizontal"
                     ></TextView>
 
@@ -299,10 +302,11 @@
                     android:layout_weight="1"
 
                     android:text="Venue"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/colorWhite"
                     android:gravity="center"
                     android:textSize="20dp"
                     android:textStyle="bold"
+                    android:background="@color/colorAccent"
                     android:layout_gravity="center_horizontal"
                     ></TextView>
 
@@ -349,10 +353,12 @@
                     android:layout_weight="1"
 
                     android:text="Coordinator Email"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/colorWhite"
                     android:gravity="center"
                     android:textSize="17dp"
                     android:textStyle="bold"
+                    android:background="@color/colorAccent"
+
                     android:layout_gravity="center_horizontal"
                     ></TextView>
 

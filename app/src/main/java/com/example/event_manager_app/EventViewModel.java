@@ -34,6 +34,13 @@ public class EventViewModel extends AndroidViewModel {
 
     }
 
+    public boolean isValidEventCode(String ev)
+    {
+
+        return eventRepository.isValidEventCode(ev);
+
+    }
+
     public void insert(Event e)
     {
         eventRepository.insert(e);
