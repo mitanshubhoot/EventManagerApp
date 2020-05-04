@@ -54,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                 boolean isValid = userViewModel.checkValidLogin(mEmail.getText().toString(), mPassword.getText().toString());
                 if(mEmail.getText().toString().equals(""))
                 {
-                    Toast.makeText(getBaseContext(), "please enter email", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "please enter email", Toast.LENGTH_SHORT).show();
                     Log.i("email", "empty");
 
 
@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(isValid )
                 {
                     mProgressBar.setVisibility(View.VISIBLE);
-                    Toast.makeText(getBaseContext(), "Successfully Logged In!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Successfully Logged In!", Toast.LENGTH_SHORT).show();
                     goToMainActivity(mEmail.getText().toString());
                     sp.edit().putBoolean("logged",true).apply();
                     useremail.edit().putString("user-email",mEmail.getText().toString()).apply();

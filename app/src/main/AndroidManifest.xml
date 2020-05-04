@@ -4,14 +4,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/icon"
+        android:icon="@mipmap/logo"
         android:label="Eventzy"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
-        <activity android:name=".AttendanceActivity"></activity>
+        <activity android:name=".EventCategoryActivity"></activity>
+        <activity android:name=".AttendanceActivity" />
         <activity android:name=".AddParticipantActivity" />
         <activity android:name=".ExploreEventsActivity" />
         <activity android:name=".ExploreActivty" />

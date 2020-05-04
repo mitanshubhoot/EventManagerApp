@@ -59,12 +59,30 @@ public abstract class EventDatabase extends RoomDatabase {
             Event e5 = new Event("EC-01","Obstacle Race",2,"harjas.gandhi18@vit.edu",3000 , 1500 , 100 , "12/9/2020","Ground" , "Extra - Curricular" ,"This fast-paced race takes you through a series of physical obstacles, players must navigate through the obstacle while being timed. This obstacle course includes running, climbing, jumping, crawling and balancing elements with the aim of testing speed and endurance");
             Event e6 = new Event("EC-02","Treasure Hunt",2,"harjas.gandhi18@vit.edu",6000 , 4000 , 200 , "11/9/2020","Vit College" , "Extra - Curricular"," Adventurer’s set sail on a treasure hunt to find the one true treasure and take it all in the end, the hunt is on! The participants either take photographs of listed items or take on the challenge to complete the tasks given in the lists in the most creative manner. This search for the treasure involves a series of clues, solve one and move on to the other till you reach the very end faster than everyone to win it all.");
             Event e7 = new Event("EC-03","V-Rock",8,"samikshapatil18@gmail.com",10000 , 8000 , 300 , "10/9/2020","Audi" , "Extra - Curricular"," V-Rock is the ultimate battle of bands showcasing their creativity and unity through the art of music. Come and rock the stage with your talent and energize the crowd with your music!");
-            Event e8 = new Event("EC-04","Footloose",9,"samikshapatil18@gmail.com",9000 , 5000 , 200 , "15/9/2020","Room : 1324D" , "Technical","Dance is the hidden language of the soul! You dance to express and not to impress! When you dance, you dance like nobody’s watching.\n" +
+            Event e8 = new Event("EC-04","Footloose",9,"samikshapatil18@gmail.com",9000 , 5000 , 200 , "15/9/2020","Room : 1324D" , "Extra - Curricular","Dance is the hidden language of the soul! You dance to express and not to impress! When you dance, you dance like nobody’s watching.\n" +
                     "\n" +
                     "Showcase your passion for dancing in this fun and challenging dance competition, Footloose.\n" +
                     "\n" +
                     " ");
+            Event e9 = new Event("SP-03","Football",7,"amitparekh@gmail.com",9000 , 4000 , 200 , "13/6/2020","Ground" , "Sports","Playing: 5   Extras: 2   Total: 7\n" +
+                    "\n" +
+ "In case of a draw, penalty shootout will decide the\n" +
+                    "Referee’s decision will be final and\n" +
+                    "Any misconduct will lead to disqualification.");
+            Event e10 = new Event("SP-02","Kabaddi",7,"amitparekh@gmail.com",10000 , 3000 , 300 , "14/6/2020","Ground" , "Sports","Playing: 7   Extras: 5   Total:12\n" +
+                    "\n" +
+                    "Team will be disqualified for any misbehaviour during the\n" +
+                    "\n" +
+                    "Standard Kabaddi rules will be\n" +
+                    "\n" +
+                    "Referee’s decision will be final"
+                    );
+            Event e15 = new Event("SC-01","Swaccha Pune",50,"kalash.nikose18@vit.edu",0 , 0 , 0 , "12/5/2020","Taljai Hills , Parvati Area" , "Socials" ,"Swaccha Pune is an initiative that is all about cleaning historical monuments and public places in Pune. Team of volunteers will conduct this activity at predefined places on evert Saturday and Sunday for one month.");
+            Event e16 = new Event("SC-02","Bus Cleaning Acitivity",70,"kalash.nikose18@vit.edu",0 , 0 , 0 , "11/5/2020","Shivajinagar bus depot","Socials","Bus depots are unhygienic places in Pune, so bus cleaning was the initiative taken to clean the PMPML buses and bus depots. The working involved washing buses, painting them, collecting garbage.");
 
+            eventDao.insert(e10);
+            eventDao.insert(e15);
+            eventDao.insert(e16);
             eventDao.insert(e1);
             eventDao.insert(e2);
             eventDao.insert(e3);
@@ -73,6 +91,12 @@ public abstract class EventDatabase extends RoomDatabase {
             eventDao.insert(e6);
             eventDao.insert(e7);
             eventDao.insert(e8);
+            eventDao.insert(e9);
+
+
+
+
+
             return null;
         }
     }

@@ -22,7 +22,9 @@ public class ExploreActivty extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final String currentUserEmail = getIntent().getStringExtra("explore_email");
+        final String currentUserEmail = getIntent().getStringExtra("explore_email_2");
+        final String domain = getIntent().getStringExtra("domain");
+
         setContentView(R.layout.activity_explore_activty);
 
         pmodel = ViewModelProviders.of(this, new ParticipantViewModel.Factory(getApplicationContext())).get(ParticipantViewModel.class);
@@ -40,8 +42,9 @@ public class ExploreActivty extends AppCompatActivity {
         final EventAdaptor adaptor = new EventAdaptor();
         recyclerView.setAdapter(adaptor);
 
-        events = emodel.getExploreEvents(codes);
+        events = emodel.getExploreEvents(codes , domain);
         adaptor.setEvents(events);
+        Log.d("Event_ list" ," "+ events.size());
 
 
         adaptor.setOnItemEventClickListener(new EventAdaptor.onItemEventClickListener() {

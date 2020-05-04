@@ -2,13 +2,14 @@
 <resources>
     <color name="colorPrimary">#171A1A</color>
     <color name="colorPrimaryDark">#06020C</color>
-    <color name="colorAccent">#ff3d00</color>
+    <color name="colorAccent">#160B29</color>
     <color name="colorTitle">#313131</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorCardViewBackground">#E9EAED</color>
-    <color name="colorLight">#618685</color>
+    <color name="colorLight">#9A7AD5</color>
     <color name="colorGrey">#212122</color>
-    <color name="colorDark">#182c25</color>
-    <color name="colorMedium">#155C50</color>
+    <color name="colorDark">#180E2B</color>
+    <color name="colorMedium">#462D73</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="explore">#070B0A</color>
 </resources>

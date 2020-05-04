@@ -30,7 +30,7 @@ public class PartcipantOptionActivity extends AppCompatActivity {
         explore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToExploreActivity(currentUserEmail);
+                goToEventCategoryActivity(currentUserEmail);
 
             }
         });
@@ -41,8 +41,8 @@ public class PartcipantOptionActivity extends AppCompatActivity {
         i.putExtra("pemail",email);
         startActivity(i);
     }
-    public void goToExploreActivity(String email){
-        Intent i = new Intent(this,ExploreActivty.class);
+    public void goToEventCategoryActivity(String email){
+        Intent i = new Intent(this,EventCategoryActivity.class);
         i.putExtra("explore_email",email);
         startActivity(i);
     }

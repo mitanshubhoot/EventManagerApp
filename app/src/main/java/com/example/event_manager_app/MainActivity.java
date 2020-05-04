@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getBaseContext(), "BYE BYE!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "BYE BYE!", Toast.LENGTH_SHORT).show();
                 sp.edit().putBoolean("logged",false).apply();
                 Log.d(TAG, "signOut: User signed out");
                 goToLoginActivity();

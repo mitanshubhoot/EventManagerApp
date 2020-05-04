@@ -64,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if(isValid) {
                     mProgressBar.setVisibility(View.VISIBLE);
                     userViewModel.createUser(email, mPassword.getText().toString());
-                    Toast.makeText(getBaseContext(), "Successfully Created An Account!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Successfully Created An Account!", Toast.LENGTH_SHORT).show();
                     goToMainActivity(email);
                     sp.edit().putBoolean("logged",true).apply();
                     useremail.edit().putString("user-email",email).apply();
@@ -73,7 +73,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(getBaseContext(), "Account not created !", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Account not created !", Toast.LENGTH_SHORT).show();
                 }
             }
         });

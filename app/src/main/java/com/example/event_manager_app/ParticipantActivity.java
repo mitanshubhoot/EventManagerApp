@@ -38,6 +38,7 @@ public class ParticipantActivity extends AppCompatActivity {
 
         events = emodel.getEvents(codes);
         adaptor.setEvents(events);
+        Log.d("Event_ list" ," "+ events.size());
 
         adaptor.setOnItemEventClickListener(new EventAdaptor.onItemEventClickListener() {
             @Override

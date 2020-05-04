@@ -19,10 +19,10 @@ public class EventViewModel extends AndroidViewModel {
 
     }
 
-    public List<Event> getExploreEvents(List<String> codes)
+    public List<Event> getExploreEvents(List<String> codes , String t)
     {
 
-        return eventRepository.getExploreEvents(codes);
+        return eventRepository.getExploreEvents(codes , t);
 
     }
 
