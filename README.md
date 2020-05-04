@@ -1,7 +1,7 @@
 # Event Manager App  
 Repository  for DBMS Course Project  
 
-An app that will be very useful for events like Melange or Vishwakarandak in VIT college   , can also be used by various clubs and committees like Execution and Planning Committee(EPEC) and Social Welfare and development Committee (SWD)of the college for better Event Management.These events occur on a large scale   , our app will provide a lot of features to automate processes of registration , mointoring and managmenet of the app for each person associated with the event. 
+An app that will be very useful for events like Melange or Vishwakarandak in VIT college   , can also be used by various clubs and committees like Execution and Planning Committee(EPEC) and Social Welfare and development Committee (SWD)of the college for better Event Management.These events occur on a large scale  involving huge number of participants and volunteers accross the city  , our app will provide a lot of features to automate processes of registration , monitoring and managment of the app for each person associated with the event. 
   
 **Users :**    
 Participant , Coordinator , Volunteer     
