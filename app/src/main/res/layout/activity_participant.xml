@@ -15,7 +15,7 @@
         android:contentDescription="logo"
 
         android:layout_centerHorizontal="true"
-        android:src="@drawable/front" />
+        android:src="@drawable/logo" />
 
     <RelativeLayout
         android:id="@+id/layout"

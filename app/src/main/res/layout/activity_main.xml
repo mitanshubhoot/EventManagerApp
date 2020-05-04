@@ -13,7 +13,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="130dp"
-        android:src="@drawable/front" />
+        android:src="@drawable/logo" />
 
     <LinearLayout
         android:id="@+id/ll"

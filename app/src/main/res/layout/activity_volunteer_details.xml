@@ -34,7 +34,8 @@
                 android:layout_marginLeft="40dp"
 
                 android:layout_gravity="center_horizontal"
-                app:cardBackgroundColor="@color/transparent"
+                app:cardBackgroundColor="@color/colorAccent"
+
                 app:cardCornerRadius="25dp"
                 app:cardElevation="10dp"
 
@@ -84,7 +85,7 @@
                     android:layout_marginTop="12dp"
                     android:layout_weight="1"
                     android:layout_gravity="center_horizontal"
-                    app:cardBackgroundColor="@color/transparent"
+                    app:cardBackgroundColor="@color/colorDark"
                     app:cardCornerRadius="25dp"
 
                     >
@@ -98,7 +99,7 @@
                             android:layout_marginLeft="16dp"
                             android:text="Email"
                             android:inputType="textEmailAddress"
-                            android:textColor="@color/colorCardViewBackground"
+                            android:textColor="@color/colorWhite"
                             android:textSize="20dp"
                             android:gravity="center"/>
                     </RelativeLayout>
@@ -160,7 +161,7 @@
                     android:layout_marginTop="12dp"
                     android:layout_weight="1"
                     android:layout_gravity="center_horizontal"
-                    app:cardBackgroundColor="@color/transparent"
+                    app:cardBackgroundColor="@color/colorAccent"
                     app:cardCornerRadius="25dp"
 
                     >
@@ -174,7 +175,7 @@
                             android:layout_marginLeft="16dp"
                             android:text="Contact No."
                             android:inputType="textEmailAddress"
-                            android:textColor="@color/colorCardViewBackground"
+                            android:textColor="@color/colorWhite"
                             android:textSize="20dp"
                             android:gravity="center"/>
                     </RelativeLayout>
@@ -236,7 +237,7 @@
                     android:layout_marginTop="12dp"
                     android:layout_weight="1"
                     android:layout_gravity="center_horizontal"
-                    app:cardBackgroundColor="@color/transparent"
+                    app:cardBackgroundColor="@color/colorAccent"
                     app:cardCornerRadius="25dp"
                     android:layout_marginLeft="20dp"
 
@@ -251,7 +252,7 @@
                             android:layout_marginLeft="16dp"
                             android:text="Publicity Hours"
                             android:inputType="textEmailAddress"
-                            android:textColor="@color/colorCardViewBackground"
+                            android:textColor="@color/colorWhite"
                             android:textSize="20dp"
                             android:gravity="center"/>
                     </RelativeLayout>

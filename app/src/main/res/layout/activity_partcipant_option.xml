@@ -12,14 +12,15 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/front" />
+        android:src="@drawable/logo"
+        android:layout_marginTop="20dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="1dp"
         android:orientation="vertical"
         android:layout_below="@+id/logo"
-        android:layout_marginTop="70dp">
+        android:layout_marginTop="140dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="250dp"

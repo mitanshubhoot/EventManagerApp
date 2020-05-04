@@ -15,7 +15,7 @@
         android:layout_above="@+id/input_layout"
         android:paddingBottom="35dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/front" />
+        android:src="@drawable/logo" />
     <RelativeLayout
         android:id="@+id/input_layout"
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="Welcome Back!"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/colorAccent"
             android:textSize="32dp"
             android:textStyle="bold" />
         <androidx.cardview.widget.CardView
@@ -87,7 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Not a user yet?"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/explore"
                 android:textSize="15dp" />
             <TextView
                 android:id="@+id/register_tv"
