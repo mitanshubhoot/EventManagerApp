@@ -61,7 +61,9 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 email=mEmail.getText().toString();
                 boolean isValid = userViewModel.checkValidRegister(email);
-                if(isValid) {
+
+                if(isValid && email.indexOf('@')!=-1 ) {
+
                     mProgressBar.setVisibility(View.VISIBLE);
                     userViewModel.createUser(email, mPassword.getText().toString());
                     Toast.makeText(getBaseContext(), "Successfully Created An Account!", Toast.LENGTH_SHORT).show();

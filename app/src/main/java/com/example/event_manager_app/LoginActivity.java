@@ -51,6 +51,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 email = mEmail.getText().toString();
+
+
                 boolean isValid = userViewModel.checkValidLogin(mEmail.getText().toString(), mPassword.getText().toString());
                 if(mEmail.getText().toString().equals(""))
                 {

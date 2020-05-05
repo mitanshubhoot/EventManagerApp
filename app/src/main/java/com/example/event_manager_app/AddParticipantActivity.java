@@ -35,15 +35,19 @@ public class AddParticipantActivity extends AppCompatActivity {
         Add = (RelativeLayout) findViewById(R.id.add_p);
         pmodel = ViewModelProviders.of(this , new ParticipantViewModel.Factory(getApplicationContext())).get(ParticipantViewModel.class);
         emodel = ViewModelProviders.of(this ).get( EventViewModel.class);
+
+
         Add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String mname = name.getText().toString();
                 Pattern p = Pattern.compile("[a-zA-Z]*");//to check special characters
                 Matcher m = p.matcher(mname);
+                String mcontact = contact.getText().toString();
 
-                if(!email.getText().toString().equals("") && !event_code.getText().toString().equals("") && m.matches() && emodel.isValidEventCode(event_code.getText().toString())) {
-                    pmodel.addParticipant(name.getText().toString(), event_code.getText().toString(),college.getText().toString(),year.getText().toString() , email.getText().toString(), Long.parseLong(contact.getText().toString()));
+
+                if(!email.getText().toString().equals("") && !event_code.getText().toString().equals("") && m.matches()  && emodel.isValidEventCode(event_code.getText().toString())) {
+                    pmodel.addParticipant(name.getText().toString(), event_code.getText().toString(),college.getText().toString(),year.getText().toString().toUpperCase(), email.getText().toString(), Long.parseLong(contact.getText().toString()));
                     Toast.makeText(getBaseContext(), "participant added ", Toast.LENGTH_SHORT).show();
                 }
             }
