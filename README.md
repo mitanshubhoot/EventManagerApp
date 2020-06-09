@@ -1,7 +1,7 @@
 # Event Manager App  
 Repository  for DBMS Course Project  
 
-An app that will be very useful for various events conducted during inter college events can also be used by various clubs and  for better Event Management.These events occur on a large scale  involving huge number of participants , volunteers and heads , our app will provide a lot of features to automate processes of registration , monitoring and proide smooth managment by the app for each person associated with the event. 
+An app that will be very useful for various events conducted during inter college events can also be used by various clubs and  for better Event Management.These events occur on a large scale  involving huge number of participants , volunteers and heads , our app will provide a lot of features to automate processes of registration , monitoring and provide smooth management by the app for each person associated with the event. 
   
 **Users :**    
 Participant , Coordinator , Volunteer     
@@ -11,9 +11,9 @@ Participant , Coordinator , Volunteer
 2. Coordinators can keep track of their volunteers publicity/working hours(used for calculating socila hours - gp2/extra-currcicular hours - gp3 in many colleges )    
 3.Coordinator  has access to increase volunteer’s working hours for easy monitoring .    
 4.Volunteer can keep count of the participants registered .    
-5.Volunteer has feature to add participants     
+5.Volunteer has feature to add participants.      
 6.Volunteers can mark attendance of participants to keep track of success of event.    
-7.Participants can explore more events categoy wise like – Technical, Sports, Extra – Curricular, Social and get details about new events like its winning prize , entry fees , description of event, domain and coordinator's email id for further contact.   
+7.Participants can explore more events category wise like – Technical, Sports, Extra – Curricular, Social and get details about new events like its winning prize , entry fees , description of event, domain and coordinator's email id for further contact.   
   
 **Framework :**       
 Android Studio  
